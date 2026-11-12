@@ -7,6 +7,7 @@ from hook import ROOT, read_json, write_json
 BEGIN = "<!-- BEGIN FUSION GUARD PROJECT RULES -->"
 END = "<!-- END FUSION GUARD PROJECT RULES -->"
 STATUS = "Fusion parametric modeling check"
+LEGACY_STATUS_SHA256 = "5c9d27188fda70f01553d68828af769a27c14157cfb56021d7433a9e52145db2"
 
 
 def ps_quote(value):
@@ -46,9 +47,8 @@ def rules_text(existing, rules):
 
 def is_ours(entry):
     status = entry.get("statusMessage", "")
-    # Also recognize the original localized status label without distributing it.
-    legacy = "5c9d27188fda70f01553d68828af769a27c14157cfb56021d7433a9e52145db2"
-    return status == STATUS or hashlib.sha256(status.encode("utf-8")).hexdigest() == legacy
+    # Preserve compatibility with the original installation marker.
+    return status == STATUS or hashlib.sha256(status.encode("utf-8")).hexdigest() == LEGACY_STATUS_SHA256
 
 
 def merge_config(existing, prepared):

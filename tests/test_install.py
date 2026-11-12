@@ -11,16 +11,13 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 
 
 KIT = Path(__file__).resolve().parents[1]
 RUNTIME = KIT / "fusion_guard"
 sys.path.insert(0, str(RUNTIME))
 import install as installer
-
-
-def legacy_status():
-    return "Fusion " + "".join(chr(n) for n in (21442, 25968, 21270, 24314, 27169, 26816, 26597))
 
 
 def unrelated_hook():
@@ -74,12 +71,14 @@ class MergeTests(unittest.TestCase):
             owned = [h for g in second["hooks"][event] for h in g["hooks"] if installer.is_ours(h)]
             self.assertEqual(len(owned), 1)
 
-    def test_legacy_localized_status_is_replaced_without_duplicates(self):
-        old = {"statusMessage": legacy_status(), "command": "legacy guard"}
-        self.assertTrue(installer.is_ours(old))
-        self.assertFalse(installer.is_ours(unrelated_hook()))
-        existing = {"hooks": {"PostToolUse": [{"matcher": ".*", "hooks": [old, unrelated_hook()]}]}}
-        merged = installer.merge_config(existing, installer.config())
+    def test_legacy_status_fingerprint_is_replaced_without_duplicates(self):
+        old = {"statusMessage": "Legacy Fusion guard", "command": "legacy guard"}
+        fingerprint = hashlib.sha256(old["statusMessage"].encode("utf-8")).hexdigest()
+        with patch.object(installer, "LEGACY_STATUS_SHA256", fingerprint):
+            self.assertTrue(installer.is_ours(old))
+            self.assertFalse(installer.is_ours(unrelated_hook()))
+            existing = {"hooks": {"PostToolUse": [{"matcher": ".*", "hooks": [old, unrelated_hook()]}]}}
+            merged = installer.merge_config(existing, installer.config())
         self.assertEqual(merged["hooks"]["PostToolUse"][0]["hooks"], [unrelated_hook()])
         self.assertEqual(len(merged["hooks"]["PostToolUse"]), 2)
 
@@ -120,7 +119,7 @@ class InstallationTests(unittest.TestCase):
         self.hooks_path = self.project / ".codex" / "hooks.json"
         self.hooks_path.parent.mkdir()
         existing = {"keep": "root metadata", "hooks": {"PreToolUse": [{"matcher": ".*", "hooks": [
-            {"statusMessage": legacy_status(), "command": "legacy guard"}, unrelated_hook()]}]}}
+            {"statusMessage": installer.STATUS, "command": "old guard"}, unrelated_hook()]}]}}
         self.hooks_path.write_text(json.dumps(existing, ensure_ascii=True), encoding="utf-8")
         self.rules_path = self.project / "AGENTS.md"
         self.rules_path.write_text("User rules must survive.\n", encoding="utf-8")
