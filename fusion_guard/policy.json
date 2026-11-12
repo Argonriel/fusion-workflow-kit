@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "enabled": false,
+  "auto_undo": false,
+  "reject_new_warnings": true,
+  "require_changed_sketches_constrained": true,
+  "max_source_bytes": 60000
+}

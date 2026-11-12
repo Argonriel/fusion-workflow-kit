@@ -1,0 +1,9 @@
+Fusion Workflow Kit v0.1.0-rc1 is ready for review.
+
+It combines uwu's specification-first workflow ideas with a Codex guard for stepwise native Fusion modeling. The goal is an editable timeline: named parameters, constrained sketches, native features, and measured checks after a deliberate edit.
+
+The ZIP includes a quick-start PDF, source code, an installer, part-spec templates, local tests, a pilot acceptance procedure, and the research guide.
+
+Target: Codex on Windows with the documented local Fusion MCP contract. Start in a disposable pilot project, review the hooks, and verify the real connection with the standard read-only probe. This is a candidate release; installation does not establish live qualification. Automatic flex testing and automatic rollback are not enabled.
+
+Please report your client/Fusion versions, probe result, pilot measurements, and any issues. Redact local paths and private model data before sharing logs.

@@ -1,0 +1,685 @@
+%PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document (opensource)
+1 0 obj
+<<
+/F1 2 0 R /F2 3 0 R /F3 40 0 R
+>>
+endobj
+2 0 obj
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
+endobj
+3 0 obj
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
+endobj
+4 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://help.autodesk.com/cloudhelp/ENU/Fusion-Designs/files/ASM-GENERATE-TIMELINE.htm)
+>> /Border [ 0 0 0 ] /Rect [ 336.6505 560.85 346.1025 571.05 ] /Subtype /Link /Type /Annot
+>>
+endobj
+5 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://help.autodesk.com/cloudhelp/ENU/Fusion-Designs/files/ASM-DESIGN-MODELING-MODES.htm)
+>> /Border [ 0 0 0 ] /Rect [ 349.0215 560.85 363.1995 571.05 ] /Subtype /Link /Type /Annot
+>>
+endobj
+6 0 obj
+<<
+/Annots [ 4 0 R 5 0 R ] /Contents 77 0 R /MediaBox [ 0 0 612 792 ] /Parent 76 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 
+  /Trans <<
+
+>> /Type /Page
+>>
+endobj
+7 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://www.research.autodesk.com/blog/rebuilding-design-history-with-autotimeline/)
+>> /Border [ 0 0 0 ] /Rect [ 190.732 590.75 200.184 600.95 ] /Subtype /Link /Type /Annot
+>>
+endobj
+8 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://help.autodesk.com/cloudhelp/ENU/Fusion-Designs/files/ASM-GENERATE-TIMELINE.htm)
+>> /Border [ 0 0 0 ] /Rect [ 439.939 511.45 449.391 521.65 ] /Subtype /Link /Type /Annot
+>>
+endobj
+9 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://www.autodesk.com/products/fusion-360/blog/october-2026-major-product-update-whats-new/)
+>> /Border [ 0 0 0 ] /Rect [ 452.31 511.45 461.762 521.65 ] /Subtype /Link /Type /Annot
+>>
+endobj
+10 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://www.research.autodesk.com/blog/rebuilding-design-history-with-autotimeline/)
+>> /Border [ 0 0 0 ] /Rect [ 464.681 511.45 474.133 521.65 ] /Subtype /Link /Type /Annot
+>>
+endobj
+11 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://help.autodesk.com/cloudhelp/ENU/Fusion-Designs/files/ASM-GENERATE-TIMELINE.htm)
+>> /Border [ 0 0 0 ] /Rect [ 491.263 475.25 500.715 485.45 ] /Subtype /Link /Type /Annot
+>>
+endobj
+12 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://help.autodesk.com/cloudhelp/ENU/Fusion-Designs/files/ASM-GENERATE-TIMELINE.htm)
+>> /Border [ 0 0 0 ] /Rect [ 194.7565 389.95 204.2085 400.15 ] /Subtype /Link /Type /Annot
+>>
+endobj
+13 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://help.autodesk.com/cloudhelp/ENU/Fusion-Designs/files/ASM-DESIGN-MODELING-MODES.htm)
+>> /Border [ 0 0 0 ] /Rect [ 542.6395 172.95 556.8175 183.15 ] /Subtype /Link /Type /Annot
+>>
+endobj
+14 0 obj
+<<
+/Annots [ 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R ] /Contents 78 0 R /MediaBox [ 0 0 612 792 ] /Parent 76 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 
+  /Trans <<
+
+>> /Type /Page
+>>
+endobj
+15 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://help.autodesk.com/cloudhelp/ENU/ADSKMCP-FusionDesktopMcp/files/ADSKMCP_FusionDesktopMcp_connecting_to_the_fusion_mcp_server_html.html)
+>> /Border [ 0 0 0 ] /Rect [ 438.175 587.65 447.627 597.85 ] /Subtype /Link /Type /Annot
+>>
+endobj
+16 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://github.com/AutodeskFusion360/FusionMCPSample/blob/main/Fusion%20MCP%20Addin/tips.md)
+>> /Border [ 0 0 0 ] /Rect [ 46 494.25 55.452 504.45 ] /Subtype /Link /Type /Annot
+>>
+endobj
+17 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://github.com/hellstein-dev/fusion360-mcp/blob/43bb027a3c450de3864a0c52f8a9c559126c40cb/src/fusion_mcp/server/tools/timeline.py)
+>> /Border [ 0 0 0 ] /Rect [ 77.5 400.85 86.952 411.05 ] /Subtype /Link /Type /Annot
+>>
+endobj
+18 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://github.com/hellstein-dev/fusion360-mcp/blob/43bb027a3c450de3864a0c52f8a9c559126c40cb/fusion_addin/handlers/timeline.py)
+>> /Border [ 0 0 0 ] /Rect [ 89.871 400.85 99.323 411.05 ] /Subtype /Link /Type /Annot
+>>
+endobj
+19 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://github.com/faust-machines/fusion360-mcp-server)
+>> /Border [ 0 0 0 ] /Rect [ 435.2455 321.55 444.6975 331.75 ] /Subtype /Link /Type /Annot
+>>
+endobj
+20 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://www.autodesk.com/products/fusion-360/blog/october-2026-major-product-update-whats-new/)
+>> /Border [ 0 0 0 ] /Rect [ 355.9075 242.25 365.3595 252.45 ] /Subtype /Link /Type /Annot
+>>
+endobj
+21 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://help.autodesk.com/cloudhelp/ENU/Fusion-Model/files/SLD-MODIFY-PARAMETERS.htm)
+>> /Border [ 0 0 0 ] /Rect [ 368.2785 242.25 382.4565 252.45 ] /Subtype /Link /Type /Annot
+>>
+endobj
+22 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://www.autodesk.com/products/fusion-360/blog/fusion-compute-mcp/)
+>> /Border [ 0 0 0 ] /Rect [ 490.7065 162.95 500.1585 173.15 ] /Subtype /Link /Type /Annot
+>>
+endobj
+23 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://static.au-uw2-prd.autodesk.com/Class_Handout_CP473669_Jeff_Strater.pdf)
+>> /Border [ 0 0 0 ] /Rect [ 450.1645 116.75 464.3425 126.95 ] /Subtype /Link /Type /Annot
+>>
+endobj
+24 0 obj
+<<
+/Annots [ 15 0 R 16 0 R 17 0 R 18 0 R 19 0 R 20 0 R 21 0 R 22 0 R 23 0 R ] /Contents 79 0 R /MediaBox [ 0 0 612 792 ] /Parent 76 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 
+  /Trans <<
+
+>> /Type /Page
+>>
+endobj
+25 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://help.autodesk.com/cloudhelp/ENU/Fusion-Model/files/SLD-MODIFY-PARAMETERS.htm)
+>> /Border [ 0 0 0 ] /Rect [ 443.4355 623.85 457.6135 634.05 ] /Subtype /Link /Type /Annot
+>>
+endobj
+26 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/core_ValueInput_createByString.htm)
+>> /Border [ 0 0 0 ] /Rect [ 460.5325 623.85 474.7105 634.05 ] /Subtype /Link /Type /Annot
+>>
+endobj
+27 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://help.autodesk.com/cloudhelp/ENU/Fusion-Designs/files/ASM-USE-TIMELINE.htm)
+>> /Border [ 0 0 0 ] /Rect [ 117.211 412.35 131.389 422.55 ] /Subtype /Link /Type /Annot
+>>
+endobj
+28 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/fusion_TimelineObject.htm)
+>> /Border [ 0 0 0 ] /Rect [ 242.6965 333.05 256.8745 343.25 ] /Subtype /Link /Type /Annot
+>>
+endobj
+29 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/fusion_TimelineGroup.htm)
+>> /Border [ 0 0 0 ] /Rect [ 259.7935 333.05 273.9715 343.25 ] /Subtype /Link /Type /Annot
+>>
+endobj
+30 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/fusion_BRepFace_entityToken.htm)
+>> /Border [ 0 0 0 ] /Rect [ 85.102 282.75 99.28 292.95 ] /Subtype /Link /Type /Annot
+>>
+endobj
+31 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/fusion_ExtrudeFeature_setOneSideExtent.htm)
+>> /Border [ 0 0 0 ] /Rect [ 502.9495 203.45 517.1275 213.65 ] /Subtype /Link /Type /Annot
+>>
+endobj
+32 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/fusion_Design_computeAll.htm)
+>> /Border [ 0 0 0 ] /Rect [ 535.624 157.25 549.802 167.45 ] /Subtype /Link /Type /Annot
+>>
+endobj
+33 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/fusion_Timeline.htm)
+>> /Border [ 0 0 0 ] /Rect [ 466.7665 110.05 480.9445 120.25 ] /Subtype /Link /Type /Annot
+>>
+endobj
+34 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://static.au-uw2-prd.autodesk.com/Class_Handout_CP473669_Jeff_Strater.pdf)
+>> /Border [ 0 0 0 ] /Rect [ 483.8635 110.05 498.0415 120.25 ] /Subtype /Link /Type /Annot
+>>
+endobj
+35 0 obj
+<<
+/Annots [ 25 0 R 26 0 R 27 0 R 28 0 R 29 0 R 30 0 R 31 0 R 32 0 R 33 0 R 34 0 R ] /Contents 80 0 R /MediaBox [ 0 0 612 792 ] /Parent 76 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 
+  /Trans <<
+
+>> /Type /Page
+>>
+endobj
+36 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://learn.chatgpt.com/docs/hooks)
+>> /Border [ 0 0 0 ] /Rect [ 186.0805 212.25 200.2585 222.45 ] /Subtype /Link /Type /Annot
+>>
+endobj
+37 0 obj
+<<
+/Annots [ 36 0 R ] /Contents 81 0 R /MediaBox [ 0 0 612 792 ] /Parent 76 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 
+  /Trans <<
+
+>> /Type /Page
+>>
+endobj
+38 0 obj
+<<
+/Contents 82 0 R /MediaBox [ 0 0 612 792 ] /Parent 76 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+39 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/fusion_Sketch_isFullyConstrained.htm)
+>> /Border [ 0 0 0 ] /Rect [ 336.0625 361.55 350.2405 371.75 ] /Subtype /Link /Type /Annot
+>>
+endobj
+40 0 obj
+<<
+/BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+>>
+endobj
+41 0 obj
+<<
+/Annots [ 39 0 R ] /Contents 83 0 R /MediaBox [ 0 0 612 792 ] /Parent 76 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 
+  /Trans <<
+
+>> /Type /Page
+>>
+endobj
+42 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://help.autodesk.com/cloudhelp/ENU/Fusion-Designs/files/ASM-GENERATE-TIMELINE.htm)
+>> /Border [ 0 0 0 ] /Rect [ 46 619.66 141.1096 630.7 ] /Subtype /Link /Type /Annot
+>>
+endobj
+43 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://www.autodesk.com/products/fusion-360/blog/october-2026-major-product-update-whats-new/)
+>> /Border [ 0 0 0 ] /Rect [ 46 575.66 184.0368 586.7 ] /Subtype /Link /Type /Annot
+>>
+endobj
+44 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://www.research.autodesk.com/blog/rebuilding-design-history-with-autotimeline/)
+>> /Border [ 0 0 0 ] /Rect [ 46 531.66 253.0368 542.7 ] /Subtype /Link /Type /Annot
+>>
+endobj
+45 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://help.autodesk.com/cloudhelp/ENU/ADSKMCP-FusionDesktopMcp/files/ADSKMCP_FusionDesktopMcp_connecting_to_the_fusion_mcp_server_html.html)
+>> /Border [ 0 0 0 ] /Rect [ 46 487.66 207.5428 498.7 ] /Subtype /Link /Type /Annot
+>>
+endobj
+46 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://github.com/AutodeskFusion360/FusionMCPSample/blob/main/Fusion%20MCP%20Addin/tips.md)
+>> /Border [ 0 0 0 ] /Rect [ 46 443.66 214.1852 454.7 ] /Subtype /Link /Type /Annot
+>>
+endobj
+47 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://github.com/hellstein-dev/fusion360-mcp/blob/43bb027a3c450de3864a0c52f8a9c559126c40cb/src/fusion_mcp/server/tools/timeline.py)
+>> /Border [ 0 0 0 ] /Rect [ 46 399.66 226.9732 410.7 ] /Subtype /Link /Type /Annot
+>>
+endobj
+48 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://github.com/hellstein-dev/fusion360-mcp/blob/43bb027a3c450de3864a0c52f8a9c559126c40cb/fusion_addin/handlers/timeline.py)
+>> /Border [ 0 0 0 ] /Rect [ 46 355.66 199.3824 366.7 ] /Subtype /Link /Type /Annot
+>>
+endobj
+49 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://github.com/faust-machines/fusion360-mcp-server)
+>> /Border [ 0 0 0 ] /Rect [ 46 299.66 155.9308 310.7 ] /Subtype /Link /Type /Annot
+>>
+endobj
+50 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://www.autodesk.com/products/fusion-360/blog/fusion-compute-mcp/)
+>> /Border [ 0 0 0 ] /Rect [ 46 255.66 204.47 266.7 ] /Subtype /Link /Type /Annot
+>>
+endobj
+51 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://help.autodesk.com/cloudhelp/ENU/Fusion-Designs/files/ASM-DESIGN-MODELING-MODES.htm)
+>> /Border [ 0 0 0 ] /Rect [ 46 211.66 177.3852 222.7 ] /Subtype /Link /Type /Annot
+>>
+endobj
+52 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://help.autodesk.com/cloudhelp/ENU/Fusion-Model/files/SLD-MODIFY-PARAMETERS.htm)
+>> /Border [ 0 0 0 ] /Rect [ 46 167.66 154.9096 178.7 ] /Subtype /Link /Type /Annot
+>>
+endobj
+53 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/fusion_TimelineObject.htm)
+>> /Border [ 0 0 0 ] /Rect [ 318 619.66 461.1704 630.7 ] /Subtype /Link /Type /Annot
+>>
+endobj
+54 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/fusion_TimelineGroup.htm)
+>> /Border [ 0 0 0 ] /Rect [ 318 575.66 460.14 586.7 ] /Subtype /Link /Type /Annot
+>>
+endobj
+55 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/fusion_Design_computeAll.htm)
+>> /Border [ 0 0 0 ] /Rect [ 318 531.66 478.54 542.7 ] /Subtype /Link /Type /Annot
+>>
+endobj
+56 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/fusion_ExtrudeFeature_setOneSideExtent.htm)
+>> /Border [ 0 0 0 ] /Rect [ 318 487.66 482.1188 498.7 ] /Subtype /Link /Type /Annot
+>>
+endobj
+57 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/fusion_BRepFace_entityToken.htm)
+>> /Border [ 0 0 0 ] /Rect [ 318 443.66 494.3916 454.7 ] /Subtype /Link /Type /Annot
+>>
+endobj
+58 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/fusion_Sketch_isFullyConstrained.htm)
+>> /Border [ 0 0 0 ] /Rect [ 318 399.66 448.8884 410.7 ] /Subtype /Link /Type /Annot
+>>
+endobj
+59 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/core_ValueInput_createByString.htm)
+>> /Border [ 0 0 0 ] /Rect [ 318 355.66 448.3732 366.7 ] /Subtype /Link /Type /Annot
+>>
+endobj
+60 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://learn.chatgpt.com/docs/hooks)
+>> /Border [ 0 0 0 ] /Rect [ 318 311.66 391.1124 322.7 ] /Subtype /Link /Type /Annot
+>>
+endobj
+61 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://static.au-uw2-prd.autodesk.com/Class_Handout_CP473669_Jeff_Strater.pdf)
+>> /Border [ 0 0 0 ] /Rect [ 318 267.66 470.8488 278.7 ] /Subtype /Link /Type /Annot
+>>
+endobj
+62 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://help.autodesk.com/cloudhelp/ENU/Fusion-Designs/files/ASM-USE-TIMELINE.htm)
+>> /Border [ 0 0 0 ] /Rect [ 318 211.66 406.458 222.7 ] /Subtype /Link /Type /Annot
+>>
+endobj
+63 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://help.autodesk.com/cloudhelp/ENU/Fusion-360-API/files/fusion_Timeline.htm)
+>> /Border [ 0 0 0 ] /Rect [ 318 167.66 432.54 178.7 ] /Subtype /Link /Type /Annot
+>>
+endobj
+64 0 obj
+<<
+/Annots [ 42 0 R 43 0 R 44 0 R 45 0 R 46 0 R 47 0 R 48 0 R 49 0 R 50 0 R 51 0 R 
+  52 0 R 53 0 R 54 0 R 55 0 R 56 0 R 57 0 R 58 0 R 59 0 R 60 0 R 61 0 R 
+  62 0 R 63 0 R ] /Contents 84 0 R /MediaBox [ 0 0 612 792 ] /Parent 76 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 
+  /Trans <<
+
+>> /Type /Page
+>>
+endobj
+65 0 obj
+<<
+/Outlines 67 0 R /PageMode /UseNone /Pages 76 0 R /Type /Catalog
+>>
+endobj
+66 0 obj
+<<
+/Author () /CreationDate (D:20261112025135-08'00') /Creator (anonymous) /Keywords (Autodesk Fusion, AI, timeline, AutoTimeline, MCP, hooks, parametric CAD) /ModDate (D:20261112025135-08'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (Practical tools for editable timelines and verifiable changes) /Title (AI Assisted Fusion Workflows) /Trapped /False
+>>
+endobj
+67 0 obj
+<<
+/Count 8 /First 68 0 R /Last 75 0 R /Type /Outlines
+>>
+endobj
+68 0 obj
+<<
+/Dest [ 6 0 R /Fit ] /Next 69 0 R /Parent 67 0 R /Title (AI Assisted Fusion Workflows)
+>>
+endobj
+69 0 obj
+<<
+/Dest [ 14 0 R /Fit ] /Next 70 0 R /Parent 67 0 R /Prev 68 0 R /Title (AutoTimeline for imported solids)
+>>
+endobj
+70 0 obj
+<<
+/Dest [ 24 0 R /Fit ] /Next 71 0 R /Parent 67 0 R /Prev 69 0 R /Title (Tools and references worth using)
+>>
+endobj
+71 0 obj
+<<
+/Dest [ 35 0 R /Fit ] /Next 72 0 R /Parent 67 0 R /Prev 70 0 R /Title (What a useful timeline must preserve)
+>>
+endobj
+72 0 obj
+<<
+/Dest [ 37 0 R /Fit ] /Next 73 0 R /Parent 67 0 R /Prev 71 0 R /Title (Hooks that validate the timeline)
+>>
+endobj
+73 0 obj
+<<
+/Dest [ 38 0 R /Fit ] /Next 74 0 R /Parent 67 0 R /Prev 72 0 R /Title (A small part that tests the workflow)
+>>
+endobj
+74 0 obj
+<<
+/Dest [ 41 0 R /Fit ] /Next 75 0 R /Parent 67 0 R /Prev 73 0 R /Title (Adoption and handoff)
+>>
+endobj
+75 0 obj
+<<
+/Dest [ 64 0 R /Fit ] /Parent 67 0 R /Prev 74 0 R /Title (Sources and further reading)
+>>
+endobj
+76 0 obj
+<<
+/Count 8 /Kids [ 6 0 R 14 0 R 24 0 R 35 0 R 37 0 R 38 0 R 41 0 R 64 0 R ] /Type /Pages
+>>
+endobj
+77 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2569
+>>
+stream
+Gb!kubBDo('&Dk(C,\bF_[q2O=h-V7`_!%kfUADN9GTGg=\SF\k+`Z`1ESijMBMSr/?:S\V;4$q#cIgmXTo22AE-2%hm=MP1T.Ep'Ieh"92_ACdJPA\bpShE.Q;IknmYCoLb'XON_f?.Ua.Udd.bZ$J#Y@X^RSDDjLNFNE%eTsGasNIU;<OZ'uX-\jJ,eEV8Q!%bmTusc0f5rGAmLVDshLU2dar0GFF$'_`pnNdEioP+kDZ;bDpES#@sefn3TR0j%#6l)6IZ/WlMu%&['BZE+P6^lW^r<R]L5rJo8.HX%N4i<I\-5eY_"sr@<?jeHasoWV:c45hQm:,>nJ6SYU+g-98J6PrH(OC=8$A9ce=LD-#j_.s43N\Y)a0cBalGOKOc;;4h0e-gNk\[A2&P[Gr<4p/e\6F)+.lq+=R_2(`s1??S>oqN$qmk*iR[H_M_[TP:*hm'3?$@'8cBm"Y-SlT@hH(*DWUG/i;5L:VE!l__X=q0gne/W,iTBtIP-=&eCZbfWH,[SH+`cn-SM#tFbi[a8RmkZ18JH%Jfpc3?qanshV2eiEu(n%4mjX$%G-AOVO\S3o"4Jr":>N/=CDfQI7g!gl0C!WIe'P,:12Zd]q#B8\'"FBQ>N124#T@I83'Nkd43Wkd%?<f78"nT9;H($hl3")Y&#>L4^4=&mi^Z`^Ou,k%th@:RdPY-$j+GUS.=^d6GLCtcIQ[DBf7fR!'+_>r"FBieB[iFm=tQ-EM,_\q0`MV2,L35M\6fLiJ^26,Idke1gcABne`765@$Z`<TD&o(\tOA@BtjR)6S,*B^77L%<X,7jUS<LPj'rO;W?SG"u[[`nQ2MX94q)NEcZT,EUC+W-W7lUs'BB3Jl-.mQbO.EG]nDGY<#f=f8AAjjBc]gKSH>XZ57!q(4M>hau^pPXJ,["C5Wgb/<Y*o(3#*u0M`/eP;l7smp_5]+iFS9''mf=8S@AcPaHq\j@:2$af$8Y4R6g%l:k,k)5Y<EtL'XK/F=He7"r[,tThfHkgOHt!1!Xo)%_LfZ?(r!>ZG*]*r-LB"JC6oFKpA*XXs,AV]KGCD\AV&*;&?\Z_l^d]eM*f2qu\4*n.<F[@0K:/=47N+TKH'T(Xc()W`C/,]*-*=4[FJgRCVR.i(3Mm2sofT*^YC@:aY,Ni_,Z&Y+=F6I=MPU5jN1tEjdgtGk9Q'<7,:=g"0QUsb/_F9pJ46m)jJ7uk*d,Fnn`ae!aS6NuXV$%WOOregaP*#&g0&O.Np;b9@L&#:]8QhRN4e]&BA/2t=A$P#iD>G%N^h*'3;fZ/R(V&YUSr,.%]'hVKRo(M,O,MpZQ^fQ-p1C``WP7I!>-u$(iQa:'P7K13?Fr]rW1i\Y&pt<n1"6FMWsrlZbIO[4buM/$,ctDmr1&HK@CB_Y8uWCbR)FQBs=^A7A3N>0`S:?ljQ(iX6;AP^>ZocV83u/K.RD7iP9RF#HiQlJK"q$GVBAIN#\L-O5k'm_&UB[6*SB0X9$'P^`V9HT,]:KVRLp*k(4:l<bO"R?$HOlI_n2`Ihg#b"JEP![H+QC]<9U-Kf9geP7niKd<=3Y\ImIL&e-XAS:u!?7<-j'_U/>qZ,%;r.e^ncd^E__cbaa;$l[/h=G^2D"fQD\^kSfN.fjL1=G0t?+33oRQoF1$B!>!=gCqQ:4LpU3oAlsFkK-fQaHQ)F,AQ!LT"#q+8])Z7c2nY18pFh(_NTl[k.m0"W@ba;(@KQ]T"$LY`\<<&VI/L465TbaDl9Mt]bJG_/@hD].>6Ur!Q&gJ<g"@WKG`;%H^\7h+RZs6S8i3u.JoLo&X%%i$D;Le^&:U]lhNn$`]D97U9P_#p6r8L..0T8>.gm[66Zf>j8I83ru#S(iC/_F``mF8P(6F$]\ba95>9ZYkgT2j^D"6>!UB\7[=6VO%74j4V)kOk-S$__7;#SE-&0I&jb^0h`I2bYVYDu+HldUgc`Llj3'6*Y,j0a:fpk4)dXO79lsjagj+q9LZUV4sf0I5&e=i7J#7!!442L@H6`BH^k+@t=938<t7_^>mLG7Tm54^n=L@]N2-XkS;olkE<qX6tj5IRPnk%!reTf[QqS?D`^1fQ-&F8EBFdHhRJqI:oI>1IXU8t"rk:ZQt4Q*$OBDmjU;ZE<=g5eTZb]F_KjG@#jcP.G;D%3OJl<[\fc2-8gC0+LuA.f0u-`_^D@6.2N.FY.@A,F/$>Vi+^,II[\YakQoE690oL^4OhQFC.t'H>>6A4U>/?@o4hEKVl9j3E#&jq>n@G:TVXH@g)\M"M<=K.*"UqleG%TYn=c3jObf.57a2kg]u*AIQn[%l,bcq;mgr&G^hn&DIrVj">r6>dhP$qR9n<k3I&3Sp50+)LlUj*(;0_Y@)%Bl/@.0+E`AQC=6Qqa`r"#'pQ0$e>Sf5bgr=68+tS%E'h)29m1\@hja*F(]@n=WVWK(g7Ac0g:844rO_1o=XDUnOEQb@&XsNl6HhcH+/?@#=j-`-H8d\ou3(usf%8#H\+,!tu:58@W?RbQT,kq&Bp[d'^FS!iUgRm@8J/4r1IR!_MS(X>T]sHQ90tr_DmlH(P7:0!#1Qj*b",Hhjli~>endstream
+endobj
+78 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2341
+>>
+stream
+Gau`TgN"5l&q/A5o\4Cbc?QM)XK,614&T,4`7gU&qI(lbi!`.#Sf'3^7MMosj7bCm6;fbc[ORDMP8jYf7ec/r#DaeHDrgrE/#"s1H?g*"'[pM[;&Z7;pkd94B0hnQaX!Q&SY]1?V'*[r3$YanX!o(<,g.UP*uRYNDpErFRO1mhiTVW3B#?G6pD.5,Z@Q.4mafG-W,lMcq:-5qNP_(H-.0]8o?41Yo\o*6^FjuHqXA]4r(`/gGhO6Pr@IXc9X"aa$c6$`c,LGcPArX?.#>4o1ep-udBM_sNNb56%c5-&G%UBXEI+<.=fNBed=tW.e],^_X=dL]O3IWUh\-gG=o<Ot`(B7s6D!t6hrB?pj>N/ND&jA6aP<&-`4;,aU39MZ*Nc,V%3k6t3O>X>7b/i`Z#\BZQrh@lKJDaq%aL,Yb&)7\8CSmmji"HhZr,CgZO\,3@5^iA1r%)[=D#C.[fXcA]EQ'H0Z\K;6'TZVarl]UN=<"#r(IY0)I5DX)E<g?$]hcnBWPZEXSeiUFY67hg't!,h/Ccjb302MI6M>DMnSk0oXFP5i_`Vj_JkaD\s9Z::?ae^Nb]g*`utldO;kUGRRSnK<>KBu(NlDYi=9b@\[nG=='K*X"S/5pXei1r%lf1*F/8(Q@`fcmNGOj-#g<clZ&sZ137O1QZ\f3-g[7#P[<8@gg!)\kYPaR;W3rWo8T7\3CM@\R<SiPe*TG%eWnLn)8@bO"4)/Ma0?a<V#J%R'CM_XYdVcu=;bLE6=$MYm2smpF@-LSo=OY.8keG5XO+J^:HdFm_0Ts..4"AD,]!rNU'MDFU\+a+7\_bJ!9o!GEgk43($DqY!gCX6TZ5FKepUT41gDIhZrhh<V"LhoUl(i>'>l`3lkk@8bFFJk\p]h1pDs6(J?7WSXn=Zi;l(p3N8%uEcouR=,XOr_Wr>n?"F2[!N6W*][^U$+=hcSg-hBC>_YKPF3V(f,(N)M_QR8]s&<EB6gQs3ssaFSU5!qf"X7coJ@_.Jr_A`_<nkVGD"'NGOPXob[<AI5g;j[;`J$ABo[<&D=HGM7Ft$XBFYf,*EuqJDVnksU5ScBfE+s"$Nu=&:rL!h+=A*)2%,(XOc:Y0_I3R?U-1>FpsnZT[`"Sm;F@<APm+"Q>u7!!((@kH@D`5\_me9S01QUUFaQ[4DOS-uMZ4Y$*.Sm#C(KX9Cq=906QJ#*gl8jU<qj-1.T$;da#?,%cG`)N>B.m+9);TqEcs53Q?F>OW:WX`De`8f@8@B9Xed[2jCU6iX5(:7PV)E81bt_k`B?ML?oA[p3M7<Lk808'r`2=9B\1cY$l#VTTiL[K:._Ph$K+qC!AQ+):r=H+20D_ueT^r+6IfY/#!W0\5t[nE-;K&a`;pmSPaSgl6D2)5@poDQMl;JB$2r+b!%nT;1h(71d'tM21VrY'YOdF'nLqd9A4sM)RY@APISG]0h=J(Rua_rd/`(lIj8uLZ5G*J1bqHl5fi%QSaI?CX?KDY9*H>S\4>5#;YP3ijjsD^@\=U2YjE%T0-Vkot\)hcs&/2dBegIallbk%>%W^"ZLIo%BCGc)A_UGbJhWMq?+d;lmu6\X:@:4[o$fJa#7tiT[*:2n6q!^s-#2P:2pdB9/Dh3=W+ee.q%RZm:"rW<T9eGh07eiHm@p!)gF$a8:pFE=hWi:.Rhl8#q?L4DN"K(5-5EE[:1'[;$ZZF9\Z4A>OJW,KdYt/:<,_hB/,8Uqk&kcaYY#Er=o@%;[a\<`?BZqhmN1]:X3UkFS1HK5O`(Y'HWc'la=+D0Z(kb:MINmco/g,mZJRLn+$pg=!LepGfZMIrk,ZgA6u"CMSmR)Q&fN[iWodW15*:nT3>4Md?;t<eKERQ62#YjZkK<k7EbTYNR7qT<uBn=;?\4seTiX>_DY`+j1,-Kk`g9NqkD_H.d^Vb+.Ri!^Yd@hBbnuZW7+N1bX*(+o_sV%KOT/HAE@mshj-+ncbo0ZGk0p+;#Bpf\IXf_CaP^p>796l`*TM#IdW?g$l\QO#'hS'.QAfZD1CL&j3.jYm4g=3NO)r#HiguWmc&2=n"s3iQO9DTQR(dnV-Jq+cZjK>3$#5c!('!MePD7Crn<.aU0Xh2iC^meN-=.Kpo4GsZL)4Y]Re`U:(4r"8&3lQRC$EEIDeFBs,>leH7UDPFi=#L2_`JEgInXiThZ+F]>]cPrVe2]g\(])jkd3r?[H_d^jOPtLbDMBYUD=tncd+^_8<)YVdLT&#S,lJL;*HX&Di]iO-IuCA!s0AbS;i*D`n"`EEO2CE`pNjpYBBPqN>12kEkeZq=jiA.K,;E_sac-F8kd#oClpTnbC2_ULg_^%+6Ehf8Af=9ohclg&D*>3:)>~>endstream
+endobj
+79 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2517
+>>
+stream
+GauI7gN)%.&r,lR'RdII.>oN%;PH9TNlTiD9JT?eA`dH;.KtrrKJ>nL!,,M>qsaJA-rP'qb)DnF.+WsfU!`htmfk!DnV[6k^*\.\U[sfa75<%&'I?%3ZWD633sic41`R#T81$nBAJCs8)5h#2-P[pP)Q,"nnXkc9`=F?40M@-tK'(079IG6I2"rfEPjnm?@'gjp=/2<8PK8eC>LR:G,W[<!q0mX2q^_VoqsKf;YASji-dDXdfalm*j%7j\D*[]?NGCg>$)>UuJnR8=`XrAoRUpKERm$&'SF@e?%.:s#3+HGnB3LXf6rdVH$Ya.:91p4@gkm#NWo_(hDt/-a_C1rXg!5C%R=m<WNaP;5cOp/95I2LO#NOADGWcJ`S_kZ1ar@+_;,7'[P4M`!\)^SQjLm%q0)i+%q+tiW]uBt_Tq#uge4*VUmU\YM<!osrPjA"2)s5"o;D/>pPp@lg[Th<sWLPIngfudu2CjWH$jg,'6C+uUAP$r:+tQF8E7)A)1-"Q_39u"`(BZJ[!jgo@p"kMgZ>m+ch@[L_?.8,?2ohdj1\Rc>qXO=m/A`*lUCWpqe[U/=G^&#CdLB/EhQ[7pXX]`##)4aK-ngje*.(/:BrVNQcq@cA\V'"iJ9[GJkKOnsAO30<77jd7C9>i_m3AlVY.ck[O5b-jiY>b;j!]i3f6Me!5_)A@dkB4V0k-0)eUTKLpL$9I&tT,--t?Oq-(CTDs+.sdgoQ4M\*`?9nmeF'9[gC+Jt#ska>Q&eJmC4piHWp.&s\[bI"4Z:!aT>p$a7:qV967Jq9dmCg!7oN<>8'A"jJThr]Br9BR#_4(Z+>;(%97ZK*AET@U5>kf^q`n#!S[.Q))7W$$7>.m+Pcf8=4e$*8K>RW+lE47):L0pRQ\NB=OW'pd.p.jdR4U$7AeecOa'D2id?7'3>>]Blg%a:MJ433FBn`GK3E,/%a4>EP>ia)%2*l\T3V$/t0r')OO^s(!od5)@`6=`k+[=2Zu\RF&nS8`k<q4(TeZ?4EBLsD=j:/<dEB6j"S'/hUIgr:)hEdE38%(F!hDf?`AFl2Dpb:Pk1\\,(YQP!G;n'jVh?Cl[=G'-m(,UO6@JJ[H[.cQQB]k8Om(UT?#fM<jF9YPH#N8nfH(g!/I=gJ:2mjK&L6reFDAa]7g(P`e"r'f"?,c=VPo&j$eIX6O=!im=2:7-s;P0IGYPC.@Aj#/-fsILt\ELoH7gG8/<'c^':nKK5_%d@CFU(+?c!uCU$3i&qo2?-%/8k!9HccF6iR[?B@!5)uCjsKOG1qaEQ0c]WHm>%_pA([IIO&Aa>nY6%c":Lg6N;l^^gjEl31/`YS)Rk\Y.@`K.Q7M0l%4Hi\`$U0rZYI><]k5o,gLM'=qUU[RpD3/5/ndj>tT-%7h245QQ!HpS4g=>s=ikZ\2sG_H!f9rpi:nV-5Ze+s't1(1?OBX[a6gL+nAZ]aA5"=_nS:=O.AIFeAL5]"`E-i7_Pm$J4DKem^QZF/o1]>"4-oedJd0K%"UY\_^h0k<@AGPX7#5`?#,N%Fg6Xrgi]pV4<\AQ8*:>*N(^=WE$nQIWcfCMY%/b78El65n37M/u1r=6"b6]o[HKr*psD[8<AV)Jh"lpe!UVKVHm*JfDR."C1@cYJ@g3-W6NVKeL`+?-&WC?V8d/$,7Su@TdE`,B&M=5+HS(%ZOU4c2I/drF52E7V-k74$CXV9jJmkIe(s;ZlbT?.[]uPWS@ob:l[O<"bZieEh3Hf[\;+14\)SZjAK`QmabHnB$d`dO8mc&2\-F<7:PCh"\6;k8s*HW7-.(n.kV\NFU'a:-h6!L['_KLTJ(HjqSL/lb]T!Sg1*XH0cMnPTV2&3'bF*u\q067/Hde657t!ls!=:7F<'6nq*#P2W&mj]+YX@?m;JMHU,;6I@,HUeY#PCRd(](s9AL:f$$pRKi0pdJ:lj`i*/n%V+R&VrBIfOo)PmFPJN/TY!IjL1&n[b-d/n7nZi-#*5/m)pf..Q4pC*QMHhr7CH7RQe*-?RJLf:MoCkZ^M=MX"2-l]AW!PS%/Yn_$=<Y>8Gm%A*,GDU8h#1K3+0OTSD_Bm+*4Xg-[ggGbVja_ubj#crGG_UtnQR@BNNA+V(GG=t&[O4S%S+-$7(:Zqp;%V'q-lckks61W_TOc8uR*msiJcF:b_[69,h%L_s__W.uT%NCB_PJ[Y!ajcYNBLY=?fC=)oEWs<k.hg`kdgJ)';*_!Ej;::A*V8c2"p+CpD(st`[\HOcbY2tfg%Y[=/)GLa!`o,i7Pu"K.9h8\C:bsXX!WIJnig!Z:)dr,/652J8A9@I>(h2O'5(6LN:3520BmW?Sg2@M>3tN)#lu=$bmD@TCM[=8W]e-"T>WsW_>aF'70DV'25X`7sOE2m(\iCp".+;`UM9?7uc6WTCi)Nc'WR^S+;bohL:%%YiYKDYn`5qE.$[9$Q/[mhLof0@uQF1@q7UnCn=tid,f@q1S%hOe3.H?rt7-dlg8WBY?tPLo4iC*qh&>*1^oOUgl41eF34trd`MLh?g$kY~>endstream
+endobj
+80 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2449
+>>
+stream
+GauHLgN)%<&q/A5o\2,R)[8QX,h>bs,:23S/Oa4$>I@&!L;8<Z$c'Qff]Lb6Hqquf+@Sr!X^sq&!goDDkrsOl$p8S#m?t_/:@rQmcS%HPHs3?,"\q=@2fu;aF54#ZSrUo!U;6A4jFk&86`O1""U,R.L*;QH6^=J>adFrV"_04$n6kO9d4c$IN<PqdC`maFh>4YIFfn-(=`';Ma:3rs'4(SuIsq!MhI#+:oCC/Vq]BMAJJM%+g;gOK(Am$MYm9'*grT/_#s$ja&kkH/r,=RcK?h%eCcPlJljTK%)h5lQN8Ca,6\=#qVJSe^b%7FW8U4N!<*$;jeL.of_Ct\uj2PUBI\.S>hMj/QTlK*r<$IZgXD2O^Os442ZUT>=BNdB9cj=XM9W]7XD0aEcbosJ9Rk`$.SWF:B?4aY2h"9NDM#S-9:#R^a?GUr?(e@N&@`<=QGUb2P5(6PWRbC(c22NM#<A_!pT!H*7>YeoWMcfO]:2-PGWc)I$r?MYe;(Gq>C&O&]h%luU9`p$U6h<e->(5E=f^X*Bq4a`AK55rnCDG_BGXf:0DIp+U_5V).dh@nd9)bO5'Iu4d^@e!7Z-;:[E1:F7;_%:D-AA(dDUVS($JQ_hRKSGVBgpV9!ILaaJ_el/BJ*880N=2u8194fGh-7)`WV'Dej]JPMP:YQTg_\Ns*3Dh_n>#DEm:CM>+5D=#Z&8fFH48Mi8O[fnL=*9HH%lQ*PcrJG6=RQq]'#1#UAp!*-N&kh!$@,rc`F\bXD>Lm]7<\Q[ItrB&rq2f5/#G.Ls'>9"uUND,_]A6MtXr#%-dtS'V"ECHHQgm5h!aAZ]!%=!\Bsh&fGOf&Nl;%+R\(50dFGc!8K%8U^qUHZ[+UP++F"i#?1[Yr$dO'gP,h*nfU'/aj:gJc1<H6?aWS5O/`*<JhW@73^4UqsPc!5,J(mP]n5S@i$YcaGEt`1RLA">djkM2jG9u5F24G\hN%&i:Uhp]$Sf0^t+6t.riq,Lea7s)d,e^!nP0+YlL<<l8]baUHV9A[g&6KCg0B\bg=0EqUhMYWCG_0cp.$siQR^DDM0&clUX3[RGI,iV__`RZ_:*[El4=uAMc?ppRB-D@[k@9rG_ZD:#m8#d9CU+Zp^812K"oB1:^:E^&6_F[cPq9aJ/94-(=+o22$JaoQ%?C2mef[3:ON-WQO:#HZei^r[,-a^3HD__6-#![p1VA65[2olIr,^Tm*S,#)0q9A<B`t<N0d0Jl\.S9<5X5SX6oqV%W)f6^=cb<WWo+eB6E`kc.fP_YofoPN)o4K%2cDBW.7aZcXhQWb>Q">?M@m'7dVaT\t?j7k,D64/agPkj\R#T^ahtJ1(njdfu\-;-sU^k+FAVkX;<Nab$oV%MZfP66VS#=LedcA$%9^3;A)g[UM6h$Gf3*DB/M04_Mfh+Ynr,U0+ZW22a$I)TgO[;mT+O,]%7sJ`+h9@>pC(!n]%9!]n)F9tcBPKkFC;D3SEoAI2i?!reQKB%>;dm(]!</T(sp\H''+#'*QV3"Z'E96XW3"[J[g,+2GVV4k!\@qT\hH<L81=rdEhR5c60"Kt$1)Ykf^F!GIk+^6hPP&siYJ3uWRi#=<)'\U5TpKqeRr1H,b+cRu-R*(09CGXFkm/hW+Cc3S!#\h3`B_UGmP+(,Q&5n(<J.5hU^p/7oUKI-gU_F,H4#P*Y1\&?OO/RAFl":Id!WZV4HMKkHK-D1MU&MRO9FdsI#R6:]J+:[^[>]#UB3O[T;KI0&%@O/M"VuK9;.k8;Gg(;JD;mP3XEDD#cB#*-Ce)]<FUPqu<)B=9DmBgC,1ZB9R(]Q@(Xt=:97-%k,[M4+NbmX)3U:Qe%U'4&(q2NK4!=*Pa@cUF4q!](X%DK:I8a!%SO%V>8XK_sMm1L=T(WS.I1hr?lrdbD%Sm(!i(&[;6S]b;]@f3>BIR(nf6jeWgX_4u.G])+!)JoH;=RWTS!2p$/eA=/k"?TH:A?fUKa6#f"YN\ed<><K)9hqEYkdp^7o.q2gj9Uo9j&"p,0Kqo[l_Z#N:_'j87Vhbrqfd@3[/oaFh#NI7\48GDkl3=JEt!H@;<Mkm44p"lkl3$rgZO[#:XI.NUjWnV\+tN&7[=oRNX<T_J?WEm?(N&JWOCb%Xh:+C\k\5;07NF^F8F'!=J-NL*W_n/^L0u-b'Zg8&]Q%M.`#iX.RX,QI&uslMf)"62'j*gkU93c1-g#hjJJF@.uoThE?JHF8^HNd+:8S-K_m-cOa;C4QAIKJW,iUrL(nmUeFhTD(C6^g>t2j-@8+ci5'>9!)+g+Xk(:LC<Ikr"*Ih:2^'"?(XUi;R4LdSld03-B.5bXbO*sADRTfndLI/"Wo;ot<Pa0QAF\K(Ql\EDnbL76F(.<MF<,Xfmi?Y6DhO6uNIUqrcKFfNo>S\0rO[IR+#/\e]DC-ugQr^8jLbD%a5<G!_U*FWZ/;`"cuYZCN23dE!U,VkUA~>endstream
+endobj
+81 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2847
+>>
+stream
+Gatm=gNM>]'n+\8S4@d(bRhEXAGqb:,],T/A7B-4TrS\X#t^()63C+deCBWK4oe-rG0GeH:F7eeic;9t4r;"d6MqGhhdT7NH:]dI$5*q&=!WqOU#f)BAiU79=N$,bJg=-Fa='UL(o:coZ\FW'/^fkmr(ff0lFU11B1XWeFAEZ\RLd<_h6%;d`XCkDgs;%j_OH\r454dK(L]r.P3D;2lZ_fIU#4aWr:0/Mmsk?F/O._T4!++9X<5D>KJE1NG<qUO,+hdV(@u&[.#?;&M\<e9(q,t(,&@\%_3uc^@kRb`okd@X7Wrl$l`-2?_@uoL>?+aa3a)G`r4-IW4O&N&)^1A,N3Ka@'e+UWn_`>g%:To#S/FRT$rW.uYbitVlq5m;5#fdqWg4ptN8Ef"Q))-9WbF!>:o?lCGcob\],e8h?""$''fE:tmM'M\ael7K:qN!89l6eOR&h`.(5:IbZ71NF?-$$D$n5=qW7]1'XTJ>rW?(AJ>nok-bt=HlD,o&uE"c1#Zo_90C^\R'<2&cF3DsQC._9!pZ8>>tA3h8&,X<oQLPm]$I^6n(#sb3O/5,eO4j+V"CW$`d:*L,_=dI_fVOHIV&ooZ'N*ODP5_9"cs'&mRKVoH#/DB(0465qN/EH&1ro"[_IBff[VjM=5/G;ZGZ+`V>BoO0l4dlV$Sl4YArltOi!nUA"p[N/U4JDqj08G!tg1$1(=JX`Tl'gMmr"ofTlD]hHrUIp"*eY*[eWM*HaL?_0StM]c"Ba=N4_XhWRIP.;:>bc4%l5InK:U]DjB$G.KmAd"N\(hqmLAoObaWNTo(mNJ9KrX63UGiFL_MS62B/%]5o$dal9$DIB8,$WVLfJq,&Ca3o;gb2QhS3g;Afd+iL#SA0^qKM+e\S4'o,@76Kau.7b>!uqPIn6(nL/0T%%fEQEh2o#^DJU\-Q#oA,T>>qko#.cSrNH_e?l]^&?:9L.N@->'TUeen)6MT#Y.'87:^l(`&\3'>sZ[+Rb/jT"b)/-i&[q"a@?W-=Q&kodiBI8\?Q_Y^Q!!lQ;N^hmOg(D9p-S"$#j->8mHtQH(sWJVrJBNoJOHrF9Mr`.#[OB_Qi<B4.PFH[,fNj!5#\`ScWgq':D1T8BJ"#u./5aB'"n4dD)bHP0-2:[A0T/b\h5@d^a!75cF"1`@$gD)5t_Ya!gq#CI?l/pJk4hI=f1&k><H6W#bIbjEdN'TO<jkbZ^g@MQk[e-M(XhaBkqAjI4,4M7tr`k>:.5p6fN6K#]WG``FmeHD?)*\eGGjcX!(3cqTk578"_A\::akmQ#J&*"f^4Q4\\qm4.`cCT4\ED95Eh`pH>>#]h3`C&iZfQ'`b%^T*F`j.D[b1dZGH'!uk>[2JnrH*lHir=GhO6VdSA[lcoX%IM4EB[P0CWm@pc`3aM/t#u_ST@6Eb6G,BJ#uPPg*4%1<JBKpFaA])4@maJimT$"CA%&'5sa:'WJ`nUc*g"moQI,O4C-?OUCRgiaOVCbY,HH-6V2U%N&?o/ZW_-c]GbPWra8W%-d>h;d)S`r#.8ljfZ)2J\E;*@lha0!NSZT?XPa3"1o;HYpL#h/km(q`<oKFo^*(3^X*n7q!G^),7KQ!qFK;u^j1b@Wcq;DtD\V%Gqc]7ba(M4Ii&#u=WfE]!Oj),ba97I*luD?\`L2Q=*FfGsO,AY$`rR!3>s@:L%1\Xskc/ACT+dp'X8[K:I!"^N_6d(FmP\-IasWJBL&/)2Wo\j^a;HDjgi7D;1jCgs.;7'$^+""C*H/\".]U8Tgg]!r\%<R<KMV$C_8`qs;RGp'/q!oR0r.(gSZuDI7Bo@Y.'I=AoH+<7qbE)YUCMC-VI>=eQBa2YZuf74ig'V#G5$0Ba[gBR4&1>(<`\nM9I'I_n:#o!PdtjZ1>5]CX&KIY^O<>b?U;>N7gDt8WZ<C5W4IuFGI61MSd9PT_R#47L@0!FWnjV;bD`">Lot(o$NIp!ca+`e_]6'pk%g2DjPki.8r2e@PBr&EOE5_]CVsL$?\ZMjr9H4:1B3(IkWWF'(A;rtWC?8SWuao0o#24la2k!E\uU[nj@nH):7-EN^#]dHQH?tA+i'>BmNh#dG>Vj2m#F.Bcn!iC=hoa^66]@>A;at@bEDk,N$]fQ;m?I91D7q1\+8_p(r?n+2H?lX<q;8hdb(]()6STb\t3Iuhs1Jm5dikjn/p7O+1_oU,A.`ndHHSp#n:\($cVuteg2S$F%_3aSB_65KMN.7e8$Pt'iSH4rQN"<m+(.SmjR!_C)*h%,Ih8CmaUVF5m%L(<lL_S0HS*FX42]#i/+)=V2NcH@/g0=TY3t)KTGk`Y)JIXItR^.dh3'fW5ffsIl5(4@69;2<,bWJQ%O4Y^&SOFRK??mD`b#17Q6Z<fq907@27Z*F)YR*&I:RA-in4dC;'A9XQ<<IJ6pFY(4*c>r$\IuJI`Qnm<(0Nf30'CR4MSkg;>r*,G\pnU\Cm_JZTfnBt6F/Cj'A+pn6AZWHHI'm1Y$!*t6NVNG`h&4Y.LS6T$/X+Idmt5K55FE'8Ku:\IJpD!BrO,6-7/9d0lU\">6MfKs08gkPc?m5Mp8nQ0>@k5uj;LD(A,WU(n#P2e]Icb$m?9l7fCNUjJJZfa:MfJ(7ANPPpk:t_U\$8DY`LDh42JAZs"NbgU/S;B<]!=.D[;,G5$'t;tZ\KmY:+=WIhe3kEuN"19c1It"p&/!6D#cR)Jq'I1d^N\fIrX=g`XhB+]iNj5EqFEJu8(:u-nGr.jMeYL8DTYt+&#6q4Ai5[@7%Dlk[UCgProCOQ@cFj]m,ACs?gs(^?!k@Y?G?6/rs]P<LH(b#o)?*W5JM[=&]#TYT@eKG:!*_839o[!kp9mg4_aUsLnVI'~>endstream
+endobj
+82 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2097
+>>
+stream
+Gb"/(>Beg[%"?O+^gkqAWi2D`p$<jHS2FO&FG[W,IHb/cg/]GT)F`3M3W&=K.*8`XqN;mWHWcp96;[aY!?aQk$uC;Go,d&p01YO0Mue!-1^<)F*fOFCE-,L@/oq7M=C1&C(4tZ.:WE\t3@MZN@,Uq?iZBQLj(AU_)gX..E4S!4rFgHq:,a(2#Y@<m"g*.lAaNA>Au(E,34&d<k5]/`Y0J]W_#'&5hp5V9]`/"%T4.ANDYs=(]8P6J]=8(cZg>bF;#h@N"Q"Z[jnN9JGcc.tgp0FBBJF`@=6"t@R)9T9Eh6i=Ehu&t3PL>B=85e29WHie->+i%p_."Mb6WLYEQ`=VAfV/hCLD)3nZEM?+d[>Fdp`Ai`jGduc"]KhWTH-RQKeY/Lp9A#F8:OPi=$4$bf`](+W'[5(MT.=0UejRi#hF=ITS(&b"<qP<Q_WmR&,*9@U<Y\S8.mE@Z=HSW9R&Xf%)u?AqfWTR2=NdDO07iIJaNChr)>Jft\LW[r#>ulYgTNl]j^KQqc%i',fE4.'s/Upb%f97fs*d#_,C1:=A,La@%c!Sa];s*7qR$AGPi7&Pc'\gHnk>47mO'Zbs6iO+i]RQF2=DbQPjR>6WP$cNPL-UMh]6hoK!=2=Mf@%pPatI")IIAqqdJ\eftefPjMO-B&KSI!(cq\@mh&gGk*2$nOe.$LC(B/O.uoU<%?rgp8>L5U$+tW?-c\<iK^/rX@Ohd[^AKF^oKj4TXt9M_GY-#-k#Somi`GUP[dIo'W:n^.!N;,71d*+Dfur*T&@H-*K_&(1O%`-i!DST;/"nHD>-fD#9OiW$$.1SsgLS.,7@[eXS6=E]u@SZ4!cuonGBcq0)]4<-Rk$-p#SU+\D4rW)?c75rc5k]=e8^cCQ'Op8QU"$#cHi3cmUQKe=F"6,2V9O7F:spSlj#"`U*V3e0H_"gDc,1'qmH/<Ykb,feq;Cd+"#E;S/-G.MUag0S3:5Ap$Ri`g,'@.kZmR=jEP15=jGVlN'bCk98YCD5V#Pb`Z&YhkW@]+FF*di!-T4]SeZ9F\K->1ih/s$%T-Tl3G'AV;XDMJQ`oE;Af#`n&@Q%.k6$0l4qhb1qH<G^2U8.egt(G7R$K^8W_p[rmhjY^nj['#O^+NGmj-DFA<mW8*jGfoH>$fZ9uDAql2^7Xo`=(dg5b>"oH]0$o^o.\do;Y)p1E@JDlM2Qhm+a0MYNib:\9M[;dME5WTNP<._2W`u1Wl,2V4`SU#jclKe!$-:CjJNVPa:'B(sZ7NX]KPMF.U.b$"SB7.6bTSR><!s#D=Q&BZYnii+6129(R<SkqNf?-b$OsR8e@4#)*NgDbX'StMNNQJf5_Z818P"adRrgN"P>C=?Ia`9k0<qIQA:C$sP_JfZH&U=eX$h_a&_Eta\M9+58YpYa'<48D:h`cZlf2fdT<[a]j440pZ+Qtif#a;"H@q]$MVrJrdhZjl5Wt6d!*S4dZs!\l\_g@7e4.9mOQRBa$L4M<D+pX7W@pRNQc?mp/&`E.,=Ng\HWbt)bhCl#qS+W/7pFnn.cT4Oe.NV$\&j/]]AD%<;Xg7"ggubTX!6h/48S@bYk"=%f&EXcg@LSDc;Af8`9!St\^)"8%>d5_%dC)X]&0OWeOj3>#qOnKp_f+J&>Xn"nKZ@e@,[/68;Co8m6I>rapkC/W>893R1:rsRoD.4)GjqJ6X;%+3aP&p+fVGT:@pf.P'Y4!W*[bsMUM%%UO'MF(fS8WSW0QH[$u`;['UIN;'ICAH&q$E`1U+d)9fT?#YfC\Tp5IYf_/AQ1>cdU]DLV`ZptV_UCo[XK#!Z8W*rA!O_D1KU4Pe\!)U^^>PeWVK83Ct30V]fQ]6[+?.;HJjf#"&D:,TYCaI>!W@388Z<Vo"Y>HSR:<F2$87NC+Y:pQO*eGpa<5$=C'AYt<,<dnCN%*^d`1^*$8$[=_WcV,qA4iPBar-e><SGSjWV)g<A0l^kbR:om/QZ`1lkqsFbBZtV%,st=Qa5(Y)nd[L'.E'."l&91VCt2`'UUQ78@tI%Z7XBV;4M.Kl/B`ES6T?j?]BfTFO)]#+!C<'F7IlOO-daWUtAGHZJH<N^5qO$FZNY+4GRle-62pk<Kdp*~>endstream
+endobj
+83 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2304
+>>
+stream
+Gb!ktgN)&i&Ui84oLl3ON<J96Jl1Vqp.AKT9t&!bDCS5SL;8=m"^nPj"'qr#j)]MHOH_;1l)\Z+WE9p)%d29hIEq(p"Q\SjE3ED=oQig,c2n>>=qh[h?;-8ql#^q'q,%^J,4a`=*!@^9#sO(Ml.&'enW[WW64s3\Q;i6Oi'h?""Ylmp1I%:GQ=7?d+f(>5R![:jIuFSa.J(@B[]!p"c\Pm>Sc*MMIdoT"G]EQ(fs_b^rfIubC%2?[qtXW)`A[K'mXR%<TDQHP8mX3@`j:3.0M0_I*_m5(=-!(f2?r'TRP8;_-7??=D5eEd9hoK:W1qp)nf<0#*'9]<+*VNX*]nU,EQ>fZ6rb#sAClu^Q+ek#F\?:ucWWpr<ii*Bd>TdQdbYPmNK1_B1jsRC3;@g3bbrh^K#.:+T)0[i%Uaa;^Jk'"I:t`uX<+hCOoZn\]0bF=CER(NrMXdhR5]KdT_#bFl:*gABdrTtePu$C=j*g],eS:F)lrTo'r<h>UMlrEWGBG3-nDR(,iulM\g^@1&''nbC6YQ@gp.^l>&$r]]Zrpg9\!umAKR&_:b1o/_s>&60J:K&pSOQA0&c76QclOO%W!Wr=38+^$t%Peeo!J5ZpnG:eHqeiS/Pg/\GYFTH1+LSUDcP%`aiLLhR-N*""'I(WhhD?QMDjO/#d8t&Ro@Oa>2FPd:<Z@<bZ>?X?`9R!gHA%F.Y<TdI.gCdi2/,*1N/;Wl<$qkJGA64Tr\oI3Z..X;fh"bmSQWFZ"b`4;sJ7X&PE19JYq(?B0*-qb<<@1)$2ZCCh*,#Lf4jDou=*\.!$XAYZmh$E<cX=."<m-c@R7X`Gj2ACV0S!'8NcWeBiWJ%hXs`YVG`TJp)um!?\mXjjf.9<lSZ//n"&KLm)odI,--:$gfN1p&OH.#fjVV(<;nWGF7p2Cg+Mc'(F>b5pZ$n2t7>UNeuWpujYJV857!kt.tDQ'HkK_RT]3I*mmU0XBaaW:b.TIu.8,$tchAa/kV&qJqB40s5A-mgk7(`)+enaHd<4B:TuEG%Hp\!c!a4S68h/CDer90^9h2mo5NudNX^KhYcuffV`ldMlcl[:XPh1aj)q:ZHhFj*(g=51np:!=7(DdbqZ?9S/+\l?6Uf`Z99P`[:=OIaf;@U.C*`lZtsB82fqJNNngLI$&r3%ak5Eg4gn^*r"'\?IgO=0805I*<%]\1WC*8sfM4IlL3AGd-1`@&/T%p#"WCl.AAo&HG<:a4rg9!$8%MQ'@h1M<aW];rfncqc7V]6G>T]A7B&HD'FeI*Xi2!bVTV=:@0.OC07C@Htk80KZ$P#p=2/T/s'phq#,30]a;a7T:)^N=l;N!oM?\oLDnQ96`M58P'?"9M?-;DdMVB.a6-k'@lWo'=h<H\=R`"L#H[KL"rM@Fi(Wh;kDdB[dbbCY7,IR44Aa$&mqF@<!>[YYs0%2->k6!@5s7CR&3""kH$R2W<9ZJkX<Q_n"Rmc@X-PY-;`[c0rW_]>B:W[U6*VM1_c5D%S'?HTNM(lc9.D5mMoC@>FKip(\D=ESCd3]IOQ](s6Jc"O,2[5*4>]'j>;.$`*6-/"T?k$HDe2"[M>8Xqk>4E26Lf'k)hHB1t*miZr5F#g$>d+^*3H/mD.>Z9iiOagH<=TJj5/k)a8Fj6`k9]S-\K<eY(V(1Yhr(6;Hkk)#h$fkT-/4U])+Ldf/p"6ciF"WjuI39(Y5[P[c)!lepLW`.p#cHQWio;>>);B8Np)[,*3_]q8[oO6=SF;o?+Q0gNc-]>Z(])U]UF=*GXX=%\*t<Ig8!if0Y1.lN;;iRd/a\\*k_6JshKnR`),!"9;h0,!ChTdX\QEcsBB')@K_pGi`Rhc,>WJ46>,sgt'M,=jG%fE]Jf%pL`]R/\LZ%`/q>+b]Lur1sp#[DW"+?P4rE1%Wrji>4:h<*n')H_2hXs[@p/Z;E"o]0]'a7q?:p7`ao]iLV+VFd??))62o0rr([1h_pU&,a-A#F-j$qKF^LAArH,OC0r5.6R:,E:gKr5u[U/2mSu&J&]8VGSo+Qij$%YQg4opF3p9!)QHLOZOH4qCo`J=ti*p<c0FO!.C+GT[VdjhV$j_0YN)mC(M:2/<R78`r]#@]55qU0a2W$pHm0g<FoH"Q,Ee$)Sb_O]JT0AOO&"[T"31)6^N9cJ:DLHJ>aJ6gtR^hgpfQWq@?%:9^9BA[.ZNE`gP4njJ.^+aGW@FpNV/]dM8Ws5HZ8![USOY3#d>..;SFi;c`%JbIs+'F#pkC3knjgIQ9T+V-f$=nGU>`:;;.(HHBunmPo]/Rj@O;3"!^>B(Uu/SXFTh+-#"6g&~>endstream
+endobj
+84 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2135
+>>
+stream
+Gb!$Hhc&8h&BE](/,#+kJ/^RFi_5tpo'6cX/d^q#ULJ-S27DR<Ee'STj)66u+nPu&G0E591eie&eOQ[rrN:P3d#[YpNAH+F.==8L_%0p7#=%iIQsRVnFO08prU-<d?8r@A56A#YDhB+0`L_Ua%te1!](?dQ_Yh<Cf8[YM+4AcY6)QZs4@W\%1B\9B$&2d$)P94d.oV2:)f;%[IO>3l#]OrK\\._>hepG`SR('!qZE_Q@J[f(p1(:Tb1b5,dMh=*Y;>P?_`i>ETH=Ykn:Fs\"^s:#^KGSj-aC\<n&Uq?ZGu6,A>*J^^dJ7q6CB,L=qs]?=DZ7[2uPk,]cZs\5rHD!%Qa\cl]V?4HL91R_>gD$qHd-)5eoHfY<qY=.n5D/9KgbHF&XQh5ml3`mk=bkliqm#CWpC$>gNfR*aE]id_H$J_-lchJBY9GVi*[(b0U2T]>]%L?"1L7r?\>?2TWjGJns:ISmmGk0Z.V!e.'T7>B;D"9l?aGP7*pkD!1t:QDUj7!a2eNV<171n`@Z0RATQ#5/e8TKqd[rc/]2V=cjVi.44&Nf0m,-$u<^U37@(48*dN`DEioJoAA`%(A<.ec;C6D#(_?a)3V6N'>#@Z#g_l`=<jI4EnET+N(d'Ohu_B_%GO"2HXL$F!I%GDjqaD._C<Jt(mV]D3i6b2`mj=]LFM`N-8r/Q1WYhTMV(1V-UdA;E1I`pQf'igMd<7brY,/kG_4>kdjm8n0B$^jUc(?dc1F'qp?6W^(uq^UW=9p<))Yb,\DZ']N]V-E:X"4jRUajg<4puiAbYAD1<*E'D%u@rD92g[=iup`.Tio(ca[\D)>8^V@"o_m8.%ZDI8p]UI-(38";=aM<,[#/Bld?Fk("Yt,o=QEMGm9T%Q'UuD[,;nm=FPJE%=g(YH62U:*Y$SRk!T*^tL/9Nns)HCjJ/*k+\71_JNQ@2pfc\*lj6Z)jpGI3tN`S*]F><m\%Ps5lO!O=*0hKq'JOlo>q[pD/mDZ=jZQ0I%#k@$0,TbNnl_?R:7$H6H9]PDCA`<gGu#Y_Lk^Ra/_h*&a2#Wfo:F_khoU:9/8:lofbWI+A4.9CWr0MaeCo<18A#FQa(I`9=Et\eKd)MbRR$n2I/01i:51-7M)B<9UiqY`Cno3rG*C6d4d'8Gd>,E7k,QAS-`7TMGk[n*7Esp&p.?ZB8/9"asC1s;"827NJ^k2[TT*W^81:G[#qoPcG]@H\On_SAO/i_*ok-5U<N!t,<e>,Z(N8.!nXfZe>APU0$c#-Ee/.rHq07s[4JAZKA+GKOj<3ORAPiBR4/h.4.ID$=LIoL1e)UQINPq72*'578a$8s.,Fa<nN*(c,tEkB3%l1Z)Pr7UFVuWg\fe_TICEF*1qJ(!_6:Y6`npsS.HLZLOa&H`N];!hR[ct$(%EWGEKTb#aib[42KbJGIDg<3A<FVCC*uYP5?&@6=V^9DWJ*.5jS5*=RrPhbb^:$:V&]*d1(PA$l+95.D'A7JED:G37&utj0NU"38stJ+15M(i`T1P_GZh'[bU7+EH;BDP_((UoUhsuP:3_B_Mn61b-J4?W9G=\*#ZfNh$@`apfgNe%@qoS-So%/(Y.K@p<]-:@=o<N'q&.`@*nj0U0U4.&n&=J0W+EQKieEE?F<p%44NsB+jq(u:r0ibUWka![$kq7*n[Lb5de)M:[3HNlMs`MI<LO&1D%"I46V$)]12Rf3jI#G%V$104$=+_K4Oo2,%hk`'*qc"a\KsOhaR3lJ)"6e/p]?eTe`q6i>=8eS_c"WWMgFr)aisQo$<P<5fEK5nO`I/tiBbCT-&!m,`?(0Z]Xh1;5\(@1,@S(BpRDHa/L;H[D"=&1MhO=Is,^ut,taR<gZ.uTcK@H18a`Pf@,k&D.&9cj'L1s8=X3=):jB)#ObX6YH.C@)q@fOhIW.b2K$)^LlA[.Z*KjrI7,+_*$E2[Vo%J6B?EpWECSh&b$@8^R?+!,))Uku^A35s8SII#aP;8H'<%jcm<g?Od<U%8b1jJstSa`GT-UJQ_T.,%_Y;<!)7Ff*3Y[]=+@=5fPp#3'd+UnOpT\"Df8R_2L'rg)07Hup*mY:At&rn<&bK9DKF+$ais+7j(]_Ql"I=+)!/VG^&[t_-p,jYa.=:oq6B^;.lpE(KPS"'~>endstream
+endobj
+xref
+0 85
+0000000000 65535 f 
+0000000061 00000 n 
+0000000113 00000 n 
+0000000220 00000 n 
+0000000332 00000 n 
+0000000566 00000 n 
+0000000804 00000 n 
+0000001023 00000 n 
+0000001252 00000 n 
+0000001484 00000 n 
+0000001723 00000 n 
+0000001953 00000 n 
+0000002186 00000 n 
+0000002421 00000 n 
+0000002660 00000 n 
+0000002914 00000 n 
+0000003202 00000 n 
+0000003434 00000 n 
+0000003709 00000 n 
+0000003980 00000 n 
+0000004183 00000 n 
+0000004426 00000 n 
+0000004659 00000 n 
+0000004877 00000 n 
+0000005104 00000 n 
+0000005375 00000 n 
+0000005608 00000 n 
+0000005852 00000 n 
+0000006080 00000 n 
+0000006315 00000 n 
+0000006549 00000 n 
+0000006785 00000 n 
+0000007037 00000 n 
+0000007273 00000 n 
+0000007502 00000 n 
+0000007729 00000 n 
+0000008007 00000 n 
+0000008192 00000 n 
+0000008407 00000 n 
+0000008603 00000 n 
+0000008849 00000 n 
+0000008955 00000 n 
+0000009170 00000 n 
+0000009398 00000 n 
+0000009634 00000 n 
+0000009859 00000 n 
+0000010142 00000 n 
+0000010375 00000 n 
+0000010649 00000 n 
+0000010917 00000 n 
+0000011113 00000 n 
+0000011322 00000 n 
+0000011554 00000 n 
+0000011780 00000 n 
+0000012009 00000 n 
+0000012235 00000 n 
+0000012465 00000 n 
+0000012711 00000 n 
+0000012946 00000 n 
+0000013186 00000 n 
+0000013424 00000 n 
+0000013603 00000 n 
+0000013824 00000 n 
+0000014047 00000 n 
+0000014268 00000 n 
+0000014636 00000 n 
+0000014723 00000 n 
+0000015117 00000 n 
+0000015191 00000 n 
+0000015300 00000 n 
+0000015427 00000 n 
+0000015554 00000 n 
+0000015685 00000 n 
+0000015812 00000 n 
+0000015943 00000 n 
+0000016058 00000 n 
+0000016167 00000 n 
+0000016276 00000 n 
+0000018937 00000 n 
+0000021370 00000 n 
+0000023979 00000 n 
+0000026520 00000 n 
+0000029459 00000 n 
+0000031648 00000 n 
+0000034044 00000 n 
+trailer
+<<
+/ID 
+[<31d4d16b77dadaeba8e30a23cd12a9cc><31d4d16b77dadaeba8e30a23cd12a9cc>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 66 0 R
+/Root 65 0 R
+/Size 85
+>>
+startxref
+36271
+%%EOF
