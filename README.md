@@ -14,17 +14,17 @@ Codex hooks and a practical workflow for building **editable, parametric Fusion 
    ```
 
 3. Review the generated hooks, then follow the [installation](docs/SETUP.md#4-run-local-tests-and-install-the-project-hooks) and [probe](docs/SETUP.md#5-trust-enable-and-prove-the-path) steps. Verify the read-only probe before modeling.
-4. Fill in the [part specification](specs/PART_SPEC_TEMPLATE.md), then run the [editable-timeline pilot](docs/ACCEPTANCE.md).
+4. Fill in the [part specification](specs/PART_SPEC_TEMPLATE.md), then run the [editable-timeline pilot](docs/ACCEPTANCE.md). Optional [guarded document operations](docs/DOCUMENT_OPERATIONS.md) create disposable designs and independent working copies through the existing Fusion MCP connection.
 
 ## Included
 
 - `fusion_guard/` - complete runtime, installer, rules, probe and tests.
-- `specs/` and `examples/` - part template and a guarded parameter edit.
-- `tests/` - installer regression tests.
+- `specs/` and `examples/` - part template, guarded parameter edit and [five native plate steps](examples/pilot/README.md).
+- `tests/` - installer, document-lifecycle and reviewed recovery regression tests.
 - `docs/` - setup, workflow, quick-start PDF, research and limitations.
 
 All project-owned runtime code is included. Fusion, Codex and Python are external prerequisites; no additional Python packages are required for the hooks or tests.
 
-**Status:** candidate release; 50 local tests pass. Each installation still needs a live probe and disposable-design pilot. Automatic Undo/Redo and parameter perturbation are disabled. See [limitations](docs/LIMITS.md) and [validation](VALIDATION.json).
+**Status:** v0.2.0-rc1; 96 local tests pass. The independent-design document lifecycle and measured plate edit/copy pilot passed on Fusion 2706.1.17 with Codex on Windows. See the [redacted live results](docs/LIVE_QUALIFICATION.md) and [validation record](VALIDATION.json). Each installation still needs its own live probe and disposable pilot. Automatic Undo/Redo and automatic parameter perturbation remain disabled; external-reference remapping is not qualified. See [limitations](docs/LIMITS.md).
 
 Inspired by uwu's workflow prototype; see [integration decisions](docs/INTEGRATION.md) and [provenance](docs/PROVENANCE.md).

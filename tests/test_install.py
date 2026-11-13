@@ -112,7 +112,7 @@ class InstallationTests(unittest.TestCase):
         self.project = self.sandbox / "project's files"
         self.guard = self.project / "fusion_guard"
         self.guard.mkdir(parents=True)
-        for name in ("hook.py", "install.py", "inspect_model.py", "policy.json", "AGENTS.project.md"):
+        for name in ("hook.py", "install.py", "inspect_model.py", "document_ops.py", "inspect_documents.py", "policy.json", "AGENTS.project.md"):
             shutil.copy2(RUNTIME / name, self.guard / name)
         self.policy_before = (self.guard / "policy.json").read_bytes()
         self.assertFalse(json.loads(self.policy_before)["enabled"])

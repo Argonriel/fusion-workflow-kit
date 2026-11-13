@@ -3,6 +3,7 @@ __pycache__/
 fusion_guard/state/
 fusion_guard/installation-backups/
 fusion_guard/hooks.prepared.json
+fusion_guard/document_policy.json
 .codex/
 *.f3d
 *.f3z

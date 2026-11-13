@@ -9,10 +9,27 @@ from hook import POLICY_PATH, STATE_ROOT, locked_state, read_json, write_json
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("action", choices=["status", "enable", "disable", "mark-interrupted"])
+    parser.add_argument("action", choices=["status", "enable", "disable", "mark-interrupted", "inspect-rejection", "acknowledge-rejection"])
     parser.add_argument("--reason")
+    parser.add_argument("--call-id")
+    parser.add_argument("--event-log")
+    parser.add_argument("--confirm-user-review", action="store_true")
     args = parser.parse_args()
     policy = read_json(POLICY_PATH)
+    if args.action in {"inspect-rejection", "acknowledge-rejection"}:
+        from rejected_calls import inspect_rejection, acknowledge_rejection
+        if not args.call_id or not args.event_log:
+            parser.error("Supply the exact call ID and original host rollout event log.")
+        if args.action == "inspect-rejection":
+            proof = inspect_rejection(read_json(STATE_ROOT / "gate.json"), STATE_ROOT, args.event_log, args.call_id)
+            print(json.dumps({"verified_host_rejection": True, "call_id": proof["call_id"],
+                              "nonce": proof["nonce"], "fusion_report_files": 0,
+                              "user_acknowledgement_required": True}, indent=2))
+            return
+        with locked_state(STATE_ROOT) as state:
+            path = acknowledge_rejection(state, STATE_ROOT, args.event_log, args.call_id,
+                                         args.confirm_user_review, args.reason)
+        print(json.dumps({"status": "host_rejected_before_execution", "audit_file": str(path)}, ensure_ascii=True))
     if args.action in {"enable", "disable"}:
         if not args.reason:
             parser.error("Enabling or disabling requires --reason; this deliberate configuration action does not grant hook trust.")

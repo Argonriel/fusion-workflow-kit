@@ -1,9 +1,7 @@
-Fusion Workflow Kit v0.1.0-rc1 is ready for review.
+Fusion Workflow Kit v0.2.0-rc1 is ready for review.
 
-It combines uwu's specification-first workflow ideas with a Codex guard for stepwise native Fusion modeling. The goal is an editable timeline: named parameters, constrained sketches, native features, and measured checks after a deliberate edit.
+This update adds scoped document creation, initial and versioned saves, independent working copies, and reviewed recovery to the existing native parametric Fusion workflow.
 
-The ZIP includes a quick-start PDF, source code, an installer, part-spec templates, local tests, a pilot acceptance procedure, and the research guide.
+The repository includes setup guidance, runtime and installer source, part specifications, five native plate examples, 96 local regression tests, and a redacted live qualification report. The disposable plate test verified an 80-to-96 mm edit, restoration, and an independent copy edit while preserving the source.
 
-Target: Codex on Windows with the documented local Fusion MCP contract. Start in a disposable pilot project, review the hooks, and verify the real connection with the standard read-only probe. This is a candidate release; installation does not establish live qualification. Automatic flex testing and automatic rollback are not enabled.
-
-Please report your client/Fusion versions, probe result, pilot measurements, and any issues. Redact local paths and private model data before sharing logs.
+Target: Codex on Windows with the documented local Fusion MCP contract. Review the hooks, run the unchanged read-only probe, and repeat the measured pilot on each installation. External-reference remapping and automatic rollback remain unqualified. Keep private CAD, local paths, scope policies and raw model reports out of shared logs.

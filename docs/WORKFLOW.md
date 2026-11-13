@@ -1,6 +1,6 @@
 # Fusion Workflow Kit
 
-Version 0.1.0-rc1 | 12 November 2026 | Codex on Windows
+Version 0.2.0-rc1 | 12 November 2026 | Codex on Windows
 
 Build a native, editable Fusion timeline one accepted step at a time. Start with a part specification, use named parameters and constrained sketches, and verify that later edits produce the intended geometry.
 
@@ -80,7 +80,16 @@ If inspection fails, stop modifying. Preserve the error and use read-only inspec
 
 ## Validation and release status
 
-See `VALIDATION.json` for the exact tests completed for this release. All automated tests here use local fixtures or disposable filesystem copies. No Fusion model was modified while assembling this kit. Recipient-specific hook loading and the geometry pilot remain required.
+See `VALIDATION.json` for the exact tests completed for this release. Automated
+tests use local fixtures or disposable filesystem copies. The separate
+[live qualification](LIVE_QUALIFICATION.md) used newly created synthetic designs
+and verified initial save, versioned saves, a measured edit/restoration and an
+independent cloud copy. Recipient-specific hook loading and the geometry pilot
+remain required.
+
+The optional [document workflow](DOCUMENT_OPERATIONS.md) uses fixed requests,
+scoped folders, registered working identities and read-only confirmation of cloud
+completion. It does not permit arbitrary document-management code in model scripts.
 
 Known limits, including unsupported timeline rollback setters and the distinction between health and intent, are in `docs/LIMITS.md`. Automatic parameter perturbation and automatic Undo/Redo are not included.
 

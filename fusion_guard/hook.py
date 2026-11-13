@@ -19,6 +19,7 @@ import sys
 import time
 import uuid
 import zlib
+import document_ops
 
 ROOT = Path(__file__).resolve().parent
 POLICY_PATH = ROOT / "policy.json"
@@ -27,7 +28,7 @@ PREFIX = "FUSION_GUARD_V1:"
 COMPRESSED_PREFIX = "FUSION_GUARD_V2:"
 MAX_REPORT_RAW_BYTES = 16 * 1024 * 1024
 MAX_REPORT_ENCODED_CHARS = 384 * 1024
-KINDS = {"feature", "sketch", "parameters", "edit", "inspect"}
+KINDS = {"feature", "sketch", "parameters", "edit", "inspect", "document", "document_inspect", "document_reconcile"}
 ALLOWED_IMPORTS = {"adsk", "adsk.core", "adsk.fusion", "math", "json"}
 FORBIDDEN_NAMES = {
     "TemporaryBRepManager", "DirectDesignType", "BaseFeature", "BaseFeatures",
@@ -142,7 +143,13 @@ def lint(source, read_only, policy):
         raise PolicyError("Python syntax error: " + str(exc)) from exc
     matches = re.findall(r"^\s*#\s*fusion-guard:\s*(\w+)\s*$", source, re.M)
     kind = matches[0] if len(matches) == 1 else None
-    if not read_only and kind not in KINDS - {"inspect"}:
+    if kind in {"document", "document_inspect", "document_reconcile"}:
+        try:
+            tree.document_request = document_ops.parse_request(source, read_only)
+        except (ValueError, SyntaxError) as exc:
+            raise PolicyError(str(exc)) from exc
+        return tree, kind, []
+    if not read_only and kind not in KINDS - {"inspect", "document_inspect", "document_reconcile"}:
         raise PolicyError("A mutation script needs a # fusion-guard: feature / sketch / parameters / edit line.")
     if kind == "inspect" and not read_only:
         raise PolicyError("inspect requires readOnly: true.")
@@ -181,6 +188,8 @@ def lint(source, read_only, policy):
         name = node.id if isinstance(node, ast.Name) else node.attr if isinstance(node, ast.Attribute) else None
         if name and (name.startswith("_fg_") or name.startswith("__") or name in FORBIDDEN_NAMES):
             raise PolicyError("This name or operation is not allowed: " + name)
+        if isinstance(node, ast.Attribute) and not read_only and node.attr in {'data', 'dataFiles', 'dataFolders', 'documents'}:
+            raise PolicyError('Cloud data and other open documents are not available to model-edit scripts; use a guarded document request.')
         if isinstance(node, ast.Attribute) and not read_only and node.attr in {"baseFeatures", "targetBaseFeature", "timelineGroups"}:
             raise PolicyError("Creating or editing a Base Feature, or reorganizing the timeline in this step, is not allowed.")
         if isinstance(node, (ast.Assign, ast.AnnAssign, ast.AugAssign)):
@@ -205,6 +214,9 @@ def lint(source, read_only, policy):
             path = path_of(node.func, aliases)
             pieces = path.split(".")
             leaf = pieces[-1]
+            if not read_only and (leaf in {"copy", "move", "promote", "uploadFile", "uploadAssembly", "copyWithInput"}
+                                  or leaf == "add" and any(p in {"documents", "dataFolders", "dataFiles"} for p in pieces)):
+                raise PolicyError("Document and cloud-file operations require a guarded document request.")
             if kind == "parameters" and not read_only and leaf.startswith(("add", "set", "create", "remove", "copy", "move")):
                 if not (leaf == "createByString" or path.endswith("userParameters.add")):
                     raise PolicyError("A parameters step may only add user parameters or modify parameter expressions.")
@@ -236,12 +248,26 @@ def lint(source, read_only, policy):
     return tree, kind, expressions
 
 
-def wrap_source(tree, nonce, kind, expressions, report_directory=None):
+def wrap_source(tree, nonce, kind, expressions, report_directory=None, document_context=None, model_authorization=None):
     inspector = (ROOT / "inspect_model.py").read_text(encoding="utf-8")
     if report_directory is not None:
         inspector += "\n_fg_report_directory = " + repr(str(report_directory)) + "\n"
     if kind == "inspect":
         return inspector + "\n\ndef run(_context: str):\n    _fg_emit(" + repr(nonce) + ", 'inspect', _fg_snapshot(), True)\n"
+    if kind in {"document", "document_inspect", "document_reconcile"}:
+        context = document_context
+        if context is None:
+            raise PolicyError("Missing trusted document execution context.")
+        runtime = (ROOT / "inspect_documents.py").read_text(encoding="utf-8")
+        if kind in {"document_inspect", "document_reconcile"}:
+            call = "_fgd_inspect(" + repr(context['request']) + ", " + repr(context['receipt']) + ", " + repr(nonce) + ")"
+        else:
+            call = "_fgd_run(" + repr(context['request']) + ", " + repr(context['registry']) + ", " + repr(context['session']) + ", " + repr(nonce) + ")"
+        return inspector + "\n" + runtime + "\n\ndef run(_context: str):\n    " + call + "\n"
+    model_check = ""
+    if model_authorization is not None:
+        inspector += "\n" + (ROOT / "inspect_documents.py").read_text(encoding="utf-8")
+        model_check = "    _fgd_require_model_target(" + repr(model_authorization) + ")\n"
     for node in tree.body:
         if isinstance(node, ast.FunctionDef) and node.name == "run":
             node.name = "_fg_user_run"
@@ -258,7 +284,7 @@ def wrap_source(tree, nonce, kind, expressions, report_directory=None):
         "    _fg_before = _fg_snapshot()\n"
         "    _fg_emit(" + repr(nonce) + ", 'before', _fg_before)\n"
         "    _fg_baseline_check(_fg_before)\n"
-    ) + validation + (
+    ) + model_check + validation + (
         "    _fg_completed = False\n"
         "    try:\n"
         "        _fg_user_run(_context)\n"
@@ -470,6 +496,89 @@ def archive(root, pending, status, records, errors, tool_response=None):
     return path
 
 
+def document_policy():
+    policy = read_json(ROOT / 'document_policy.json', {
+        'version': 1, 'enabled': False, 'allowed_parent_folder_ids': [],
+        'allowed_source_versions': [], 'name_prefixes': []})
+    document_ops.validate_policy(policy)
+    return policy
+
+
+def finish_document(state, state_root, pending, records, tool_response, inspection=False):
+    errors = []
+    before_rec = records.get('before')
+    after_rec = records.get('inspect' if inspection else 'after')
+    if before_rec:
+        try:
+            document_ops.validate_snapshot(before_rec.get('snapshot'))
+            pending['before'] = before_rec['snapshot']
+        except (ValueError, TypeError, KeyError) as exc:
+            errors.append('Invalid document baseline: ' + str(exc))
+    before = pending.get('before')
+    if not before or not after_rec:
+        errors.append('A complete document before/after report is missing.')
+    elif after_rec.get('completed') is not True:
+        errors.append('The document operation did not complete; partial cloud or document changes may exist.')
+    else:
+        try:
+            assessed, waiting = document_ops.assess(before, after_rec['snapshot'], pending['document_request'])
+            errors.extend(assessed)
+        except (ValueError, TypeError, KeyError) as exc:
+            errors.append('Invalid document acceptance report: ' + str(exc))
+    if tool_failed(tool_response):
+        errors.append('The Fusion tool returned an error.')
+    if after_rec:
+        pending['after'] = after_rec.get('snapshot')
+    if errors:
+        pending['status'] = 'failed'
+        pending['errors'] = errors
+        archive(state_root, pending, 'document_failed', records, errors, tool_response)
+        return feedback('; '.join(errors) + ' Further writes are blocked. No automatic undo, deletion, or retry occurred.')
+    if waiting:
+        pending['status'] = 'awaiting_cloud'
+        archive(state_root, pending, 'document_awaiting_cloud', records, [])
+        return feedback('Document operation submitted; cloud processing is not complete. Run the unchanged document_probe.py with readOnly:true. Further writes remain blocked.', False)
+    registry = state.get('document_registry', document_ops.empty_registry())
+    state['document_registry'] = document_ops.register(registry, pending['document_request'], after_rec['snapshot'], pending['session_id'], pending['nonce'])
+    archive(state_root, pending, 'document_passed', records, [])
+    state['pending'] = None
+    return feedback('Document acceptance passed: ' + pending['document_request']['action'] + '. Source and destination identities were checked and the new working identity was recorded.', False)
+
+
+def reconcile_saved_result(state, state_root, probe, pending, records):
+    request = probe['reconciliation_request']
+    errors = []
+    waiting = False
+    snapshot = records.get('inspect', {}).get('snapshot')
+    if not pending or pending.get('nonce') != request['operation_nonce'] or pending.get('status') not in {'failed', 'interrupted'}:
+        errors.append('The reviewed failed operation is no longer the pending operation.')
+    elif pending.get('document_request', {}).get('action') != {'reconcile_initial_save': 'save_new_document', 'reconcile_working_save': 'save_working_document'}[request['action']]:
+        errors.append('The recorded save action does not match the reviewed recovery request.')
+    else:
+        try:
+            errors, waiting = document_ops.assess(pending['before'], snapshot, pending['document_request'])
+            actual = snapshot['result'].get('file') or {}
+            if actual.get('id') != request['expected_file_id']:
+                errors.append('The saved file is not the user-reviewed cloud identity.')
+        except (ValueError, TypeError, KeyError) as exc:
+            errors.append('Invalid reconciliation evidence: ' + str(exc))
+    if errors:
+        archive(state_root, probe, 'document_reconciliation_failed', records, errors)
+        return feedback('; '.join(errors) + ' The original failure and gate are preserved.')
+    if waiting:
+        archive(state_root, probe, 'document_reconciliation_waiting', records, [])
+        return feedback('The reviewed file is still processing. The original failure and gate are preserved.', False)
+    # Write a new report under the inspection call ID. Never overwrite the
+    # original failed operation report or present reconciliation as rollback.
+    probe['reconciles_operation_nonce'] = pending['nonce']
+    probe['reconciles_call_id'] = pending['call_id']
+    state['document_registry'] = document_ops.register(state.get('document_registry', document_ops.empty_registry()),
+        pending['document_request'], snapshot, pending['session_id'], probe['nonce'])
+    archive(state_root, probe, 'document_reconciled_expected_result', records, [])
+    state['pending'] = None
+    return feedback('The user-reviewed save result matches the original requested postconditions. The working identity is registered; the original failed report is retained. No model or cloud mutation occurred during reconciliation.', False)
+
+
 def process(event, policy, state_root):
     if not policy.get("enabled", False):
         return {}
@@ -504,24 +613,68 @@ def process(event, policy, state_root):
                 return deny("Undo boundaries have not been tested live; automatic undo/redo remains disabled. Inspect and recover manually in Fusion, then run a read-only inspection.")
             if tool != "mcp__fusion__fusion_mcp_execute":
                 return deny("Unrecognized Fusion mutation tool; inspect its behavior first.")
+            doc_policy = document_policy()
             if args.get("featureType") != "script":
                 if pending and args.get("featureType") == "document":
                     return deny("An unaccepted change exists; inspect or recover it first. Do not switch, close or save the document.")
+                if doc_policy['enabled'] and args.get('featureType') == 'document':
+                    operation = args.get('object', {})
+                    if operation.get('operation') == 'save' or operation.get('userConfirmedSaveAndClose'):
+                        return deny('Use a guarded save_new_document or save_working_document request so the destination identity is checked.')
                 return {}  # Purchase, rendering and normal document actions retain their own authorization.
             obj = args.get("object", {})
             read_only = obj.get("readOnly") is True
             source = obj.get("script")
             tree, kind, expressions = lint(source, read_only, policy)
-            if read_only and kind != "inspect":
+            if read_only and kind not in {"inspect", "document_inspect", "document_reconcile"}:
                 return {}
             if not call_id or not session:
                 return deny("Missing session_id or tool_use_id; acceptance cannot be correlated reliably.")
             if not read_only and pending:
                 return deny("The previous change has not passed acceptance/recovery (" + pending["status"] + "). Read-only inspection is allowed; further changes are paused.")
+            registry = state.get('document_registry', document_ops.empty_registry())
+            context = None
+            authorization = None
+            if kind == 'document':
+                try:
+                    document_ops.authorize(tree.document_request, doc_policy, registry, session)
+                except document_ops.DocumentPolicyError as exc:
+                    return deny(str(exc))
+                context = {'request': tree.document_request, 'registry': registry, 'session': session}
+            elif kind == 'document_inspect':
+                tracked = pending if pending and pending['kind'] == 'document' else None
+                context = {'request': tracked['document_request'] if tracked else {'action': 'inspect'},
+                           'receipt': (tracked.get('after') or {}).get('result', {}) if tracked else {}}
+            elif kind == 'document_reconcile':
+                recovery = tree.document_request
+                if not pending or pending['kind'] != 'document' or pending['status'] not in {'failed', 'interrupted'}:
+                    return deny('There is no failed document operation eligible for user-reviewed reconciliation.')
+                expected_action = {'reconcile_initial_save': 'save_new_document', 'reconcile_working_save': 'save_working_document'}[recovery['action']]
+                if pending['nonce'] != recovery['operation_nonce'] or pending['document_request']['action'] != expected_action or not pending.get('before'):
+                    return deny('The reconciliation does not match the recorded failed save.')
+                try:
+                    document_ops.authorize(pending['document_request'], doc_policy, registry, pending['session_id'])
+                    document_ops.validate_snapshot(pending.get('after'))
+                except (ValueError, TypeError, KeyError) as exc:
+                    return deny('The original save ownership or post-operation evidence is incomplete: ' + str(exc))
+                observed = next((d for d in pending['after']['documents'] if d['key'] == pending['after']['active_key']), {})
+                initial = next((d for d in pending['before']['documents'] if d['key'] == pending['before']['active_key']), {})
+                expected_name = pending['document_request'].get('name') or (pending['before'].get('source') or {}).get('name')
+                if (not observed.get('creation_id') or observed.get('saved') is not True
+                        or observed.get('name') != expected_name):
+                    return deny('The failed operation did not record the expected newly saved document.')
+                if expected_action == 'save_working_document' and recovery['expected_file_id'] != pending['document_request']['file_id']:
+                    return deny('Working-save reconciliation must retain the registered cloud identity.')
+                context = {'request': pending['document_request'], 'receipt': {
+                    'initial_creation_id': initial['creation_id'],
+                    'document_creation_id': observed['creation_id'],
+                    'file': {'id': recovery['expected_file_id'], 'complete': False, 'children': None}}}
+            elif not read_only and doc_policy['enabled']:
+                authorization = document_ops.model_authorization(registry, session)
             nonce = uuid.uuid4().hex
             report_directory = (state_root / "transport" / nonce).absolute()
             report_directory.mkdir(parents=True, exist_ok=False)
-            rewritten = wrap_source(tree, nonce, kind, expressions, report_directory)
+            rewritten = wrap_source(tree, nonce, kind, expressions, report_directory, context, authorization)
             updated = dict(args)
             updated["object"] = dict(obj, script=rewritten)
             entry = {"session_id": session, "call_id": call_id, "nonce": nonce,
@@ -529,6 +682,10 @@ def process(event, policy, state_root):
                      "transport_dir": str(report_directory),
                      "expressions": expressions,
                      "source_sha256": hashlib.sha256(source.encode()).hexdigest()}
+            if kind == 'document':
+                entry['document_request'] = tree.document_request
+            elif kind == 'document_reconcile':
+                entry['reconciliation_request'] = tree.document_request
             if read_only:
                 # Keep bounded stale probes without ever expiring the mutation gate automatically.
                 state["probes"] = {k: v for k, v in state["probes"].items() if time.time() - v["created_at"] < 3600}
@@ -562,11 +719,25 @@ def process(event, policy, state_root):
                     return feedback("Read-only inspection did not return a complete report; the existing gate is unchanged. "
                                     + "; ".join(errors) + ". The original response was preserved: " + str(path))
                 snapshot = record["snapshot"]
+                if probe['kind'] == 'document_reconcile':
+                    return reconcile_saved_result(state, state_root, probe, pending, records)
+                if probe['kind'] == 'document_inspect':
+                    document_ops.validate_snapshot(snapshot)
+                    archive(state_root, probe, 'document_inspection', records, [])
+                    if pending and pending['kind'] == 'document':
+                        if pending['status'] == 'awaiting_cloud':
+                            return finish_document(state, state_root, pending, records, event.get('tool_response'), True)
+                        return feedback('Document inspection completed. The failed or running document operation remains gated; reconcile the recorded cloud and document changes before any further write.')
+                    return feedback('Read-only document inspection completed; no model or cloud data was changed.', False)
                 validate_snapshot(snapshot)
                 archive(state_root, probe, "inspection", records, [])
+                if pending and pending['kind'] == 'document':
+                    return feedback('Model inspection completed, but it cannot recover a document operation. Use document_probe.py and review the recorded document/cloud changes.')
                 if pending and pending.get("before"):
                     if pending["status"] in {"failed", "interrupted"} and snapshot == pending["before"]:
-                        archive(state_root, pending, "baseline_observables_restored", {"inspect": record}, [])
+                        probe['reconciles_call_id'] = pending['call_id']
+                        probe['reconciles_operation_nonce'] = pending['nonce']
+                        archive(state_root, probe, "baseline_observables_restored", {"inspect": record}, [])
                         state["pending"] = None
                         return feedback("The inspected document, timeline, parameters and geometry summary match the baseline; the gate is released. " + summary(snapshot), False)
                     return feedback("Inspection completed, but recovery to the pre-change state is not confirmed; the gate remains. " + summary(snapshot))
@@ -579,6 +750,13 @@ def process(event, policy, state_root):
             except PolicyError as exc:
                 records = {}
                 errors.append(str(exc))
+            if pending['kind'] == 'document':
+                if errors:
+                    pending['status'] = 'failed'
+                    pending['errors'] = errors
+                    archive(state_root, pending, 'document_failed', records, errors, event.get('tool_response'))
+                    return feedback('; '.join(errors) + ' Document acceptance failed; further writes remain blocked.')
+                return finish_document(state, state_root, pending, records, event.get('tool_response'))
             before_rec, after_rec = records.get("before"), records.get("after")
             if before_rec:
                 validate_snapshot(before_rec.get("snapshot"))
@@ -596,7 +774,7 @@ def process(event, policy, state_root):
                 pending["errors"] = errors
                 if after_rec:
                     pending["after"] = after_rec.get("snapshot")
-                archive(state_root, pending, "failed", records, errors)
+                archive(state_root, pending, "failed", records, errors, event.get("tool_response"))
                 return feedback("; ".join(errors) + ". The next change is blocked; no automatic undo occurred. Inspect and recover before continuing.")
             archive(state_root, pending, "passed", records, [])
             state["pending"] = None

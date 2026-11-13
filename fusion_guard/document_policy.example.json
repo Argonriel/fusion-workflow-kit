@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "enabled": false,
+  "allowed_parent_folder_ids": [],
+  "allowed_source_versions": [],
+  "name_prefixes": ["FG_Pilot_", "RC_"]
+}

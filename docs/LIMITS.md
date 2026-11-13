@@ -26,3 +26,17 @@ It checks the permitted step delta, changed sketches, new or changed warnings/er
 Retain the original error and pending gate. After a person restores the model, run the standard probe. Matching observables permit gate clearance for failed/interrupted operations; pending operations are never cleared by a timeout alone. Marking an interruption requires confirming the original call ended and recording the user's decision.
 
 Reports can contain document IDs, names, dimensions and model details. Keep `state/`, installation backups and generated hook commands local. They are excluded from the release archive.
+
+The optional [document workflow](DOCUMENT_OPERATIONS.md) adds separately checked
+identity transitions and exact destination/source checks. It supports complete,
+pinned latest native F3D files. A copied parent can still reference original
+children; such copies are recorded but are not eligible for model edits. External
+reference remapping, historical-version copying and general cloud file management
+are not qualified.
+
+Cloud submission is not completion. Initial saves can expose temporary local IDs,
+and later saves can temporarily expose the previous complete revision. The gate
+waits for coherent expected metadata without retrying writes. Failed saves require
+explicit user-reviewed read-only reconciliation. A separate narrow administrative
+path handles verified host approval rejections before Fusion execution; neither
+path constitutes automatic rollback or bypasses a rejected action.

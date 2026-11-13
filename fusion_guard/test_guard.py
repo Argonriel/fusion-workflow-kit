@@ -240,6 +240,14 @@ class GuardTests(unittest.TestCase):
         event, pending = self.begin()
         self.assertEqual(self.finish(event, pending, extra={"isError": True})["decision"], "block")
 
+    def test_failed_model_report_preserves_original_tool_error(self):
+        event, pending = self.begin()
+        error = {"isError": True, "message": "Native sketch solver rejected the dimension"}
+        self.assertEqual(self.finish(event, pending, extra=error)["decision"], "block")
+        report = hook.read_json(next((self.root / "reports").glob("*.json")))
+        self.assertEqual(report["tool_response"]["message"], error["message"])
+        self.assertTrue(report["tool_response"]["isError"])
+
     def test_cross_session_writes_are_serialized(self):
         self.begin()
         result = self.run_event(pre(session="session-B", call="call-2"))
@@ -266,6 +274,18 @@ class GuardTests(unittest.TestCase):
         self.assertIsNotNone(hook.read_json(self.root / "gate.json")["pending"])
         self.assertNotIn("decision", self.probe_result(before, "inspect-2"))
         self.assertIsNone(hook.read_json(self.root / "gate.json")["pending"])
+
+    def test_model_recovery_keeps_original_failure_report_unchanged(self):
+        event, pending = self.begin()
+        self.finish(event, pending, complete=False, extra={"isError": True, "message": "Original native failure"})
+        original = next((self.root / "reports").glob("*.json"))
+        original_bytes = original.read_bytes()
+        self.assertNotIn("decision", self.probe_result(snapshot(), "recovery-inspection"))
+        self.assertEqual(original.read_bytes(), original_bytes)
+        recovered = [hook.read_json(p) for p in (self.root / "reports").glob("*.json")
+                     if hook.read_json(p)["status"] == "baseline_observables_restored"]
+        self.assertEqual(len(recovered), 1)
+        self.assertEqual(recovered[0]["operation"]["reconciles_call_id"], pending["call_id"])
 
     def test_probe_cannot_unlock_still_running_write(self):
         event, pending = self.begin()
@@ -471,7 +491,7 @@ class GuardTests(unittest.TestCase):
             self.assertIn("exit 2", groups[0]["hooks"][0]["commandWindows"])
 
     def test_real_hook_process_denies_invalid_input_and_concurrent_write(self):
-        for name in ("hook.py", "inspect_model.py"):
+        for name in ("hook.py", "inspect_model.py", "document_ops.py", "inspect_documents.py"):
             (self.root / name).write_bytes((hook.ROOT / name).read_bytes())
         hook.write_json(self.root / "policy.json", POLICY)
         def invoke(event):

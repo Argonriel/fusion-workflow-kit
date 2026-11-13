@@ -1,46 +1,65 @@
 {
-  "release": "0.1.0-rc1",
+  "release": "0.2.0-rc1",
   "date": "2026-11-12",
-  "status": "candidate_for_live_qualification",
+  "date_timezone": "America/Los_Angeles",
+  "status": "independent_design_workflow_qualified_on_recorded_installation",
   "automated_checks": [
     {
-      "suite": "retained_guard",
+      "suite": "guard",
       "command": "python -B fusion_guard/test_guard.py",
-      "passed": 38,
+      "passed": 40,
       "failed": 0,
       "scope": "isolated local fixtures; no Fusion calls"
     },
     {
-      "suite": "installer",
-      "command": "python -B -m unittest discover -s tests -v",
-      "passed": 12,
+      "suite": "installer_document_and_host_rejection",
+      "command": "python -B -m unittest discover -s tests -q",
+      "passed": 56,
       "failed": 0,
-      "scope": "disposable filesystem projects; preserves unrelated hooks, policy and trust sentinels"
-    },
-    {
-      "suite": "supplied_prototype_review",
-      "passed": 27,
-      "failed": 0,
-      "scope": "simulated hooks only; source is not included"
+      "scope": "disposable local projects and simulated Fusion adapters"
     }
   ],
+  "live_qualification": {
+    "platform": "Windows",
+    "client": "Codex desktop",
+    "fusion_version": "2706.1.17",
+    "tool": "mcp__fusion__fusion_mcp_execute",
+    "probe": "unchanged standard probe accepted through genuine hooks",
+    "document_lifecycle": "passed",
+    "native_plate": "passed",
+    "length_edit_and_restoration": "passed",
+    "versioned_save": "passed",
+    "independent_copy_and_edit": "passed",
+    "original_open_document_observables": "unchanged",
+    "all_open_documents_clean": true,
+    "source_length_mm": 80,
+    "edited_copy_length_mm": 96,
+    "hole_diameter_mm": 5,
+    "timeline_items": 4,
+    "fully_constrained_sketches": 2,
+    "base_features": 0,
+    "warnings_or_errors": 0,
+    "measurement_stages": 6,
+    "length_tolerance_mm": 0.01,
+    "max_length_deviation_mm_less_than": 1e-06,
+    "summary": "docs/LIVE_QUALIFICATION.md"
+  },
   "release_checks": {
     "all_python_parses": true,
-    "example_passes_guard_lint": true,
+    "all_model_examples_pass_guard_lint": true,
     "distribution_policy_disabled": true,
+    "document_scope_example_disabled": true,
     "automatic_undo_disabled": true,
-    "private_paths_and_state_excluded": true,
-    "quick_start_pdf_pages": 4,
-    "quick_start_pdf_visual_review": "all pages inspected",
-    "research_guide_pages": 8,
-    "research_guide_primary_sources": 22
+    "private_paths_state_and_cad_excluded": true
   },
-  "not_completed": [
-    "Live loading of this release in a recipient Codex session",
-    "Disposable Fusion plate pilot",
-    "Measured edit and restoration trial",
-    "Mechanical interface validation for a production part"
+  "not_qualified": [
+    "External-reference remapping",
+    "Historical-version copying",
+    "General cloud file management",
+    "Automatic Undo/Redo",
+    "Automatic parameter perturbation",
+    "Other client schemas or operating systems",
+    "Production mechanical, material and manufacturing validation"
   ],
-  "active_project_changes": "none",
-  "runtime_notes": "Core control flow retained; installer supports Windows PowerShell only. See docs/LIMITS.md."
+  "recipient_requirement": "Run the unchanged live probe and disposable measured pilot on each installation."
 }

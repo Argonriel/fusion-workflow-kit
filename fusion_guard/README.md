@@ -2,6 +2,12 @@
 
 Project-local Codex guard for native parametric Fusion operations. This release targets Windows and the `mcp__fusion__fusion_mcp_execute` script contract. Use the kit's main README for installation and `docs/ACCEPTANCE.md` for live qualification.
 
+The optional [document extension](../docs/DOCUMENT_OPERATIONS.md) uses fixed
+requests, a separate local scope policy and accepted working-file identities.
+Initial and versioned saves wait for cloud confirmation. Reviewed recovery uses
+separate audit records and retains original failures. Do not copy another
+project's scope policy, state or generated hook paths.
+
 ## Before modeling
 
 Read `policy.json` and the project's `AGENTS.md`. An enabled policy is not proof that hooks are loaded. Pass the complete contents of `probe.py` to the Fusion execute tool as `object.script`, with `featureType: "script"` and `object.readOnly: true`. Require accepted inspection feedback and its matching local report. The unwrapped probe intentionally raises an error. Do not remove that error or inject the inspector yourself.
