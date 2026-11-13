@@ -22,7 +22,11 @@ Use a centered fully constrained rectangular sketch, one native extrusion, a ful
 
 [Numbered example scripts](../examples/pilot/README.md) reproduce these steps.
 
-Expected starting geometry: one solid; outer size 80 x 50 x 4 mm; four 5 mm through-holes at X = +/-30 mm, Y = +/-15 mm. Keep a named saved baseline before the edit trial using the authorized document tool or UI. A report is not a saved design backup.
+Expected starting geometry: one solid; outer size 80 x 50 x 4 mm; four 5 mm through-holes at X = +/-30 mm, Y = +/-15 mm. Keep a named saved baseline before the edit trial using the qualified document workflow. A report is not a saved design backup.
+
+For the MCP workflow, close this build round with the qualified guarded save and
+confirm the new Fusion cloud version. Apply the [cloud checkpoint procedure](CLOUD_CHECKPOINTS.md)
+to each later edit round as well; record its version and acceptance evidence.
 
 ## 3. Test an intentional edit
 
@@ -38,6 +42,10 @@ Require all of the following:
 - Dimensions retain their expressions; no duplicate replacement geometry.
 
 Use a stated measurement tolerance, for example 0.01 mm for this simple test. Fusion API lengths use internal centimeters: convert measurement reports to millimeters explicitly. Record both the actual measurements and the feature-health report.
+
+Save the accepted 96 mm result and confirm its new cloud version before closing
+this edit round. Treat restoration as the next deliberate round with its own
+measurements and confirmed save, so both states remain traceable.
 
 Then manually restore `plate_length` to `80 mm` through another deliberate, separately accepted edit and repeat the geometry measurements. This is a planned test sequence in a disposable design, not automatic recovery after a failed operation. If any step fails, stop and follow the guard's recovery process.
 

@@ -13,6 +13,9 @@ Run them only on a new disposable design. They do not create or save a document.
    completion before sending the next file. Do not concatenate the scripts.
 5. Follow [the editability procedure](../../docs/ACCEPTANCE.md) for the saved
    baseline, 80-to-96 mm edit, deliberate restoration, measurement and copy test.
+6. End each accepted build/edit round with the [cloud checkpoint](../../docs/CLOUD_CHECKPOINTS.md):
+   save the same working file, confirm its next cloud version and record the
+   source lineage, change and evidence. Do not leave a round at an unsaved edit.
 
 The rectangle uses explicit horizontal/vertical constraints. The hole sketch
 uses a centered construction rectangle and reuses its fully constrained corner

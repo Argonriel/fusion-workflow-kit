@@ -5,6 +5,16 @@ Revision:
 Design owner:
 Purpose:
 
+## Source and working-copy lineage
+
+- Original document ID, exact version and version ID:
+- Working-copy document ID, folder and branch purpose:
+- Source-to-copy map location:
+- Round record location (use `ROUND_RECORD_TEMPLATE.md`):
+
+Preserve the original and its useful native history. Continue later rounds on the
+same working copy; record a new parent relationship for deliberate branches.
+
 ## Interfaces and connections
 
 | Mating part | Connection mechanism | Required fit/clearance | Evidence/source | Acceptance check |
@@ -48,4 +58,6 @@ Use measured dimensions or a documented reference. Record fit-coupon results for
 - [ ] Hook inspection reports are accepted; baseline issues are disclosed.
 - [ ] A deliberate edit trial passes in a disposable copy with measured geometry.
 - [ ] Mating fit/interference and manufacturing constraints are reviewed.
-- [ ] The saved design, revision and unresolved issues are recorded.
+- [ ] Every edit round has an accepted Fusion cloud save, confirmed expected version and no remaining unsaved changes.
+- [ ] Source lineage, working identity, version before/after, change/reason and acceptance/save evidence are recorded locally for every round.
+- [ ] The final cloud location, version and unresolved issues are recorded for handoff.

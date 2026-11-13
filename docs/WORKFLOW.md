@@ -63,7 +63,22 @@ Require both the tool's inspection feedback and a matching local `inspection` re
 
 ## Daily workflow
 
-**Specify -> inspect -> parameters -> constrained sketch -> native feature -> accept -> edit and verify.**
+**Specify -> inspect -> identify working copy -> native steps -> accept and measure -> save to Fusion cloud -> confirm version -> record and hand off.**
+
+Preserve the original and record its exact revision when creating a native working
+copy. Reuse that working file across subsequent rounds so its cloud versions form
+one continuous sequence. Preserve its editable sketches, parameters and feature
+history. Create another copy only for an explicitly recorded branch or new source
+revision, not for every save.
+
+Every edit round must finish the [cloud checkpoint procedure](CLOUD_CHECKPOINTS.md)
+before completion or handoff. A round can contain several accepted modeling
+steps; each step still needs its own acceptance. Save the authorized working file
+through the qualified document path, wait for the expected cloud version and a
+clean document, and retain a [round record](../specs/ROUND_RECORD_TEMPLATE.md).
+An accepted model edit or a local report alone does not complete the round.
+Read-only work does not require another version. This is an assistant closeout
+requirement, not an automatic save performed by the Stop hook.
 
 Each modifying call starts with exactly one mode comment:
 
@@ -80,7 +95,7 @@ If inspection fails, stop modifying. Preserve the error and use read-only inspec
 
 ## Validation and release status
 
-See `VALIDATION.json` for the exact tests completed for this release. Automated
+See [VALIDATION.json](../VALIDATION.json) for the exact tests completed for this release. Automated
 tests use local fixtures or disposable filesystem copies. The separate
 [live qualification](LIVE_QUALIFICATION.md) used newly created synthetic designs
 and verified initial save, versioned saves, a measured edit/restoration and an
@@ -91,7 +106,7 @@ The optional [document workflow](DOCUMENT_OPERATIONS.md) uses fixed requests,
 scoped folders, registered working identities and read-only confirmation of cloud
 completion. It does not permit arbitrary document-management code in model scripts.
 
-Known limits, including unsupported timeline rollback setters and the distinction between health and intent, are in `docs/LIMITS.md`. Automatic parameter perturbation and automatic Undo/Redo are not included.
+Known limits, including unsupported timeline rollback setters and the distinction between health and intent, are in [LIMITS.md](LIMITS.md). Automatic parameter perturbation and automatic Undo/Redo are not included.
 
 ## Share and maintain
 

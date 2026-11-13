@@ -40,3 +40,10 @@ waits for coherent expected metadata without retrying writes. Failed saves requi
 explicit user-reviewed read-only reconciliation. A separate narrow administrative
 path handles verified host approval rejections before Fusion execution; neither
 path constitutes automatic rollback or bypasses a rejected action.
+
+The [end-of-round cloud checkpoint](CLOUD_CHECKPOINTS.md) is a mandatory assistant
+procedure, not a background autosave service. The current Stop hook checks
+unaccepted operations; it does not detect every accepted-but-unsaved edit or
+automatically save on chat termination. Complete and verify the explicit save
+before declaring a round complete. Human edits and interruptions still require
+checking the actual document and cloud state.

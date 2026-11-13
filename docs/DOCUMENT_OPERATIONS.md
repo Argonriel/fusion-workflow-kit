@@ -5,6 +5,12 @@ Fusion MCP script endpoint. It supports creation and copying without accepting
 general document-management Python from the caller. Existing model checks remain
 in place. No Computer Use or automatic Undo/Redo is required.
 
+Complete the [cloud checkpoint](CLOUD_CHECKPOINTS.md) at the end of every edit
+round: reuse the identified working copy, save once after acceptance, confirm
+the expected new cloud version, and retain the source lineage and round record.
+Do not finish with accepted but unsaved model changes. The hooks validate a
+requested save; they do not initiate saves automatically when a round ends.
+
 ## Scope and setup
 
 1. Finish other writes and confirm the shared gate has no pending operation.

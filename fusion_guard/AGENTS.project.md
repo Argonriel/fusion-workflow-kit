@@ -28,6 +28,14 @@ These rules apply only to Fusion operations in this project. They do not restric
 - Proceed to the next step only after acceptance passes. Even if the tool returns geometry, wait for PostToolUse acceptance.
 - Reports can be large. When orchestrating tools in code, preserve the original tool result for hook inspection and print only a short summary to the conversation. Read complete data from the local reports instead of repeatedly printing the full model.
 
+## Edit rounds, cloud saves and lineage
+
+- Preserve original designs. Create one identified native working copy for each selected source revision and branch, record the source ID/version and copy ID, and continue subsequent rounds on that same working file. Do not make a fresh copy for every round or assume a copied assembly has independent child references.
+- Every round with model changes must end with accepted modeling checks, a save to the authorized Fusion cloud working file through a qualified document path, and confirmation of the expected new version, completed cloud processing and no unsaved changes. Keep each model step separate and accepted. Read-only rounds need no new version; an accepted save covering the last change needs no duplicate save.
+- Before reporting completion, handing off or leaving the working document for another task, record the change and reason, source revision, working file ID, before/after cloud versions and acceptance/save evidence locally. Follow `docs/CLOUD_CHECKPOINTS.md` and `specs/ROUND_RECORD_TEMPLATE.md` (or their installed project locations). Keep private records and CAD out of public repositories.
+- Cloud submission or a local report is not completion. While a guarded save is awaiting cloud processing, use only the unchanged read-only document probe; do not repeat the save. Failed or unconfirmed saves leave the round incomplete and follow the existing recovery process. Never save another writer's work or failed geometry merely to finish a round.
+- This is a required assistant closeout procedure. The current Stop hook does not automatically save documents or enforce every round boundary. Establish a qualified destination and save path before beginning edits; do not substitute a local export for the cloud checkpoint.
+
 ## Failure and completion
 
 - If inspection fails, reports are missing or an operation completes only partially, stop further mutations, preserve the original error and run a read-only inspection. Moving the timeline marker back or deleting the newest feature is not complete recovery.

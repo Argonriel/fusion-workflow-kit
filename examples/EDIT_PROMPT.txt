@@ -3,3 +3,5 @@ Read the project Fusion rules and policy first. Confirm the hook path with the u
 In the disposable mounting-plate pilot, change plate_length from 80 mm to 96 mm. Keep the existing native feature history and parameter expressions. Use one accepted parameters step, then inspect and measure the result.
 
 Require zero timeline growth, one solid, outer size 96 x 50 x 4 mm, four 5 mm through-holes at X = +/-38 mm and Y = +/-15 mm, and no new warnings or errors. Report actual measurements with units and compare them with the expected values. If a check fails, stop modifying and preserve the original error and gate.
+
+After acceptance, finish this round by saving the registered working copy to Fusion cloud through the qualified document workflow. Confirm the expected new cloud version, completed processing and no unsaved changes before reporting completion. Record the source revision, working ID, before/after versions, change and reason, measurements and save acceptance reference locally. Follow docs/CLOUD_CHECKPOINTS.md; do not create another copy or alter the original. If saving remains unconfirmed, report the round as incomplete.
